@@ -1,0 +1,12 @@
+.card {
+  display: block;
+  margin: 15px auto;
+  width: 75vw;
+}
+
+@media screen and (min-width: 480px) {
+  .card {
+      height: 85vh;
+      width: auto;
+  }
+} 
