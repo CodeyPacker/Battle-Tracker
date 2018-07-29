@@ -3,313 +3,236 @@ var cards = {
     level: 14
   },
   absorbing: {
-    level: 2,
-    imagePath: "../images/marvel/absorbingman.png"
+    level: 2
   },
   aim: {
-    level: 1,
-    imagePath: "../images/marvel/aimsoldier.png"
+    level: 1
   },
   arnimzola: {
-    level: 4,
-    imagePath: "../images/marvel/arnimzola.png"
+    level: 4
   },
   baronvonstrucker: {
-    level: 12,
-    imagePath: "../images/marvel/baronvonstrucker.png"
+    level: 12
   },
   baronzemo: {
-    level: 16,
-    imagePath: "../images/marvel/baronzemo.png"
+    level: 16
   },
   bullseye: {
-    level: 2,
-    imagePath: "../images/marvel/bullseye.png"
+    level: 2
   },
   carnage: {
-    level: 12,
-    imagePath: "../images/marvel/carnage.png"
+    level: 12
   },
   crossbones: {
-    level: 4,
-    imagePath: "../images/marvel/crossbones.png"
+    level: 4
   },
   doctor: {
-    level: 8,
-    imagePath: "../images/marvel/doctoroctopus.png"
+    level: 8
   },
   electro: {
-    level: 6,
-    imagePath: "../images/marvel/electro.png"
+    level: 6
   },
   greengoblin: {
-    level: 12,
-    imagePath: "../images/marvel/greengoblin.png"
+    level: 12
   },
   hob: {
-    level: 6,
-    imagePath: "../images/marvel/hobgoblin.png"
+    level: 6
   },
   hydra: {
-    level: 1,
-    imagePath: "../images/marvel/hydrasoldier.png"
+    level: 1
   },
   kang: {
-    level: 16,
-    imagePath: "../images/marvel/kang.png"
+    level: 16
   },
   kingpin: {
-    level: 12,
-    imagePath: "../images/marvel/kingpin.png"
+    level: 12
   },
   klaw: {
-    level: 6,
-    imagePath: "../images/marvel/klaw.png"
+    level: 6
   },
   kraven: {
-    level: 4,
-    imagePath: "../images/marvel/kraventhehunter.png"
+    level: 4
   },
   lizard: {
-    level: 1,
-    imagePath: "../images/marvel/lizard.png"
+    level: 1
   },
   loki: {
-    level: 20,
-    imagePath: "../images/marvel/loki.png"
+    level: 20
   },
   madame: {
-    level: 8,
-    imagePath: "../images/marvel/madamehydra.png"
+    level: 8
   },
   malekith: {
-    level: 16,
-    imagePath: "../images/marvel/malekith.png"
+    level: 16
   },
   mandarin: {
-    level: 10,
-    imagePath: "../images/marvel/mandarin.png"
+    level: 10
   },
   maximus: {
-    level: 10,
-    imagePath: "../images/marvel/maximus.png"
+    level: 10
   },
   modok: {
-    level: 14,
-    imagePath: "../images/marvel/modok.png"
+    level: 14
   },
   mysterio: {
-    level: 8,
-    imagePath: "../images/marvel/mysterio.png"
+    level: 8
   },
   norman: {
-    level: 14,
-    imagePath: "../images/marvel/normanosborn.png"
+    level: 14
   },
   redskull: {
-    level: 18,
-    imagePath: "../images/marvel/redskull.png"
+    level: 18
   },
   rhino: {
-    level: 6,
-    imagePath: "../images/marvel/rhino.png"
+    level: 6
   },
   sandman: {
-    level: 2,
-    imagePath: "../images/marvel/sandman.png"
+    level: 2
   },
   scorpion: {
-    level: 1,
-    imagePath: "../images/marvel/scorpion.png"
+    level: 1
   },
   shocker: {
-    level: 2,
-    imagePath: "../images/marvel/shocker.png"
+    level: 2
   },
   super: {
-    level: 6,
-    imagePath: "../images/marvel/superadaptoid.png"
+    level: 6
   },
   taskmaster: {
-    level: 8,
-    imagePath: "../images/marvel/taskmaster.png"
+    level: 8
   },
   leader: {
-    level: 4,
-    imagePath: "../images/marvel/theleader.png"
+    level: 4
   },
   unspoken: {
-    level: 8,
-    imagePath: "../images/marvel/theunspoken.png"
+    level: 8
   },
   ultron: {
-    level: 18,
-    imagePath: "../images/marvel/ultron.png"
+    level: 18
   },
   venom: {
-    level: 10,
-    imagePath: "../images/marvel/venom.png"
+    level: 10
   },
   vulture: {
-    level: 1,
-    imagePath: "../images/marvel/vulture.png"
+    level: 1
   },
   winter: {
-    level: 10,
-    imagePath: "../images/marvel/wintersoldier.png"
+    level: 10
   },
   yellow: {
-    level: 10,
-    imagePath: "../images/marvel/yellowjacket.png"
+    level: 10
   },
   //WIZARD OF OZ
   black: {
-    level: 2,
-    imagePath: "../images/oz/blackbees.png"
+    level: 2
   },
   blinkie: {
-    level: 6,
-    imagePath: "../images/oz/blinkie.png"
+    level: 6
   },
   crows: {
-    level: 1,
-    imagePath: "../images/oz/crows.png"
+    level: 1
   },
   fighting: {
-    level: 10,
-    imagePath: "../images/oz/fightingtrees.png"
+    level: 10
   },
   flutter: {
-    level: 1,
-    imagePath: "../images/oz/flutterbudgets.png"
+    level: 1
   },
   generalguph: {
-    level: 11,
-    imagePath: "../images/oz/generalguph.png"
+    level: 11
   },
   generaljinjur: {
-    level: 16,
-    imagePath: "../images/oz/generaljinjur.png"
+    level: 16
   },
   gurgles: {
-    level: 10,
-    imagePath: "../images/oz/gurgles.png"
+    level: 10
   },
   gwig: {
-    level: 7,
-    imagePath: "../images/oz/gwig.png"
+    level: 7
   },
   hammer: {
-    level: 3,
-    imagePath: "../images/oz/hammerheads.png"
+    level: 3
   },
   hoppers: {
-    level: 9,
-    imagePath: "../images/oz/hoppers.png"
+    level: 9
   },
   horners: {
-    level: 9,
-    imagePath: "../images/oz/horners.png"
+    level: 9
   },
   invisible: {
-    level: 5,
-    imagePath: "../images/oz/invisiblebears.png"
+    level: 5
   },
   irongiant: {
-    level: 13,
-    imagePath: "../images/oz/irongiant.png"
+    level: 13
   },
   jackdaws: {
-    level: 1,
-    imagePath: "../images/oz/jackdaws.png"
+    level: 1
   },
   kalidah: {
-    level: 15,
-    imagePath: "../images/oz/kalidah.png"
+    level: 15
   },
   kingdox: {
-    level: 2,
-    imagePath: "../images/oz/kingdox.png"
+    level: 2
   },
   kingkleaverofutensia: {
-    level: 5,
-    imagePath: "../images/oz/kingkleaverofutensia.png"
+    level: 5
   },
   kingkrewlofjinxland: {
-    level: 17,
-    imagePath: "../images/oz/kingkrewlofjinxland.png"
+    level: 17
   },
   limoneag: {
-    level: 12,
-    imagePath: "../images/oz/limoneag.png"
+    level: 12
   },
   mombi: {
-    level: 11,
-    imagePath: "../images/oz/mombi.png"
+    level: 11
   },
   nome: {
-    level: 3,
-    imagePath: "../images/oz/nome.png"
+    level: 3
   },
   oztrich: {
-    level: 3,
-    imagePath: "../images/oz/oztrich.png"
+    level: 3
   },
   phanfasms: {
-    level: 14,
-    imagePath: "../images/oz/phanfasms.png"
+    level: 14
   },
   quox: {
-    level: 18,
-    imagePath: "../images/oz/quox.png"
+    level: 18
   },
   rigmaroles: {
-    level: 1,
-    imagePath: "../images/oz/rigmaroles.png"
+    level: 1
   },
   royal: {
-    level: 4,
-    imagePath: "../images/oz/royalgardeneroftherosekingdom.png"
+    level: 4
   },
   scoodlers: {
-    level: 2,
-    imagePath: "../images/oz/scoodlers.png"
+    level: 2
   },
   nome: {
-    level: 20,
-    imagePath: "../images/oz/thenomeking.png"
+    level: 20
   },
   yoop: {
-    level: 13,
-    imagePath: "../images/oz/theyoop.png"
+    level: 13
   },
   tititi: {
-    level: 12,
-    imagePath: "../images/oz/tititihoochoothegreatjinjin.png"
+    level: 12
   },
   wheelers: {
-    level: 8,
-    imagePath: "../images/oz/wheelers.png"
+    level: 8
   },
   whimsies: {
-    level: 7,
-    imagePath: "../images/oz/whimsies.png"
+    level: 7
   },
   wickedwitchoftheeast: {
-    level: 8,
-    imagePath: "../images/oz/wickedwitchoftheeast.png"
+    level: 8
   },
   wickedwitchofthewest: {
-    level: 19,
-    imagePath: "../images/oz/wickedwitchofthewest.png"
+    level: 19
   },
   winged: {
-    level: 6,
-    imagePath: "../images/oz/wingedmonkeys.png"
+    level: 6
   },
   wolves: {
-    level: 4,
-    imagePath: "../images/oz/wolves.png"
+    level: 4
   }
 };
 let munchkinModifier = document.getElementsByClassName("munchkin-modifier");
@@ -339,7 +262,6 @@ class Munchkin extends Character {
 class Monster extends Character {
   constructor(options) {
     super(options);
-    this.imagePath;
     this.name;
     this.level;
   }
@@ -349,10 +271,7 @@ class Monster extends Character {
     return this.name;
   }
 
-  getImagePath() {
-    this.imagePath = "images/marvel/" + this.name + ".png";
-    return this.imagePath;
-  }
+
 
   getMonsterLevel() {
     this.level = cards[this.name].level;
@@ -370,9 +289,7 @@ startButton.onclick = function() {
   console.log("battle has started");
   munchkin.getLevel();
   monster.getName();
-  monster.getImagePath();
   console.log(monster.name);
-  console.log(monster.imagePath);
   monster.getMonsterLevel();
   document.querySelector(".card").style.display = "block";
 };
