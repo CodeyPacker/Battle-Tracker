@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <title>Munchkin</title>
+</head>
+
+<body>
+
+  <input type="text" placeholder="Enter Monster Name" class="monster-name">
+  <br>
+  <input type="number" placeholder="Munchkin Level" class="munchkin-level">
+  <button class="start-battle">Start</button>
+
+  <div class="card">
+    <p class="card__monster--name"></p>
+    <p class="card__monster--level"></p>
+    <p class="card__monster--treasure"></p>
+    <p class="card__monster--badstuff"></p>
+  </div>
+
+  <button class="munchkin-modifier" value="1">+1</button>
+  <button class="munchkin-modifier" value="-1">-1</button>
+  <button class="munchkin-modifier" value="5">+5</button>
+  <button class="munchkin-modifier" value="-5">-5</button>
+
+  <footer>
+    <script src="app.js"></script>
+  </footer>
+</body>
+
+</html>
