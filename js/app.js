@@ -1,4 +1,4 @@
-var cards = {
+const cards = {
   abomination: {
     level: 14
   },
@@ -271,8 +271,6 @@ class Monster extends Character {
     return this.name;
   }
 
-
-
   getMonsterLevel() {
     this.level = cards[this.name].level;
     return this.level;
@@ -283,7 +281,7 @@ const munchkin = new Munchkin({});
 
 const monster = new Monster({});
 
-var startButton = document.querySelector(".start-battle");
+const startButton = document.querySelector(".start-battle");
 
 startButton.onclick = function() {
   console.log("battle has started");
