@@ -1,249 +1,22 @@
-var cards = {
-  abomination: {
-    level: 14
-  },
-  absorbing: {
-    level: 2
-  },
-  aim: {
-    level: 1
-  },
-  arnimzola: {
-    level: 4
-  },
-  baronvonstrucker: {
-    level: 12
-  },
-  baronzemo: {
-    level: 16
-  },
-  bullseye: {
-    level: 2
-  },
-  carnage: {
-    level: 12
-  },
-  crossbones: {
-    level: 4
-  },
-  doctor: {
-    level: 8
-  },
-  electro: {
-    level: 6
-  },
-  greengoblin: {
-    level: 12
-  },
-  hob: {
-    level: 6
-  },
-  hydra: {
-    level: 1
-  },
-  kang: {
-    level: 16
-  },
-  kingpin: {
-    level: 12
-  },
-  klaw: {
-    level: 6
-  },
-  kraven: {
-    level: 4
-  },
-  lizard: {
-    level: 1
-  },
-  loki: {
-    level: 20
-  },
-  madame: {
-    level: 8
-  },
-  malekith: {
-    level: 16
-  },
-  mandarin: {
-    level: 10
-  },
-  maximus: {
-    level: 10
-  },
-  modok: {
-    level: 14
-  },
-  mysterio: {
-    level: 8
-  },
-  norman: {
-    level: 14
-  },
-  redskull: {
-    level: 18
-  },
-  rhino: {
-    level: 6
-  },
-  sandman: {
-    level: 2
-  },
-  scorpion: {
-    level: 1
-  },
-  shocker: {
-    level: 2
-  },
-  super: {
-    level: 6
-  },
-  taskmaster: {
-    level: 8
-  },
-  leader: {
-    level: 4
-  },
-  unspoken: {
-    level: 8
-  },
-  ultron: {
-    level: 18
-  },
-  venom: {
-    level: 10
-  },
-  vulture: {
-    level: 1
-  },
-  winter: {
-    level: 10
-  },
-  yellow: {
-    level: 10
-  },
-  //WIZARD OF OZ
-  black: {
-    level: 2
-  },
-  blinkie: {
-    level: 6
-  },
-  crows: {
-    level: 1
-  },
-  fighting: {
-    level: 10
-  },
-  flutter: {
-    level: 1
-  },
-  generalguph: {
-    level: 11
-  },
-  generaljinjur: {
-    level: 16
-  },
-  gurgles: {
-    level: 10
-  },
-  gwig: {
-    level: 7
-  },
-  hammer: {
-    level: 3
-  },
-  hoppers: {
-    level: 9
-  },
-  horners: {
-    level: 9
-  },
-  invisible: {
-    level: 5
-  },
-  irongiant: {
-    level: 13
-  },
-  jackdaws: {
-    level: 1
-  },
-  kalidah: {
-    level: 15
-  },
-  kingdox: {
-    level: 2
-  },
-  kingkleaverofutensia: {
-    level: 5
-  },
-  kingkrewlofjinxland: {
-    level: 17
-  },
-  limoneag: {
-    level: 12
-  },
-  mombi: {
-    level: 11
-  },
-  nome: {
-    level: 3
-  },
-  oztrich: {
-    level: 3
-  },
-  phanfasms: {
-    level: 14
-  },
-  quox: {
-    level: 18
-  },
-  rigmaroles: {
-    level: 1
-  },
-  royal: {
-    level: 4
-  },
-  scoodlers: {
-    level: 2
-  },
-  nome: {
-    level: 20
-  },
-  yoop: {
-    level: 13
-  },
-  tititi: {
-    level: 12
-  },
-  wheelers: {
-    level: 8
-  },
-  whimsies: {
-    level: 7
-  },
-  wickedwitchoftheeast: {
-    level: 8
-  },
-  wickedwitchofthewest: {
-    level: 19
-  },
-  winged: {
-    level: 6
-  },
-  wolves: {
-    level: 4
-  }
-};
+const monsters = [
+  { name: 'abomination', power: 14, treasure: 4, levels: 1, abilities: '-4 against Hulk. Players in combat with him do not get any combat bonuses from items with a bonus of +3 or less', bad: 'Lose two levels and discard two cards from your hand', },
+  { name: 'absorbing man', power: 2, treasure: 1, levels: 1, abilities: 'If the surface you are playing on is glass: +1, wood: +2, plastic: +4, metal: +8, other (including multiple materials): + 10.', bad: 'He crushes your stuff. Loses an equipped item'},
+  { name: 'aim soldier', power: 1, treasure: 1, levels: 1, abilities: '+5 against anyone with at least 1,000 gold pieces worth of items in play.', bad: 'He steals your tech. Discard at least 500 gold pieces worth of items.'},
+  { name: 'arnim zola', power: 4, treasure: 2, levels: 1, abilities: '+2 for each affiliation of the player(s) in combat', bad: 'Lose your affiliation(s).'},
+  { name: 'baron von strucker', power: 12, treasure: 3, levels: 1, abilities: '+3 against anyone with no affiliation. -2 against Avengers', bad: 'Lose at least 1,000 gold pieces worth of items.'},
+  { name: 'baron zemo', power: 16, treasure: 4, levels: 2, abilities: 'Draw and discard the top two cards of the door deck when he enters combat. He gets +5 for each monster revealed this way', bad: 'Lose your footgear, and the next time you attempt to run away, you automatically fail.'},
+  { name: 'bullseye', power: 2, treasure: 1, levels: 1, abilities: 'He never misses. Combat bonuses count double for him. He is that good', bad: 'Lose your armor. If you arent wearing any, lose two levels'},
+  { name: 'carnage', power: 12, treasure: 3, levels: 1, abilities: '+4 against Spider-Friends. -2 against Avengers. May join venom in combat without the use of a wandering monster card.', bad: 'You are dead and you lose a level.', },
+];
 let munchkinModifier = document.getElementsByClassName("munchkin-modifier");
 
 // Methods of this class will be extended by Munchkins and Monsters
 class Character {
-  constructor({ level }) {}
+  constructor({ power }) {}
 
   modifier(damage) {
-    this.level += damage;
-    return this.level;
+    this.power += damage;
+    return this.power;
   }
 }
 
@@ -253,9 +26,9 @@ class Munchkin extends Character {
     this.name = "Munchkin";
   }
 
-  getLevel() {
-    this.level = parseInt(document.querySelector(".munchkin-level").value);
-    return this.level;
+  getpower() {
+    this.power = parseInt(document.querySelector(".munchkin-power").value);
+    return this.power;
   }
 }
 
@@ -263,19 +36,18 @@ class Monster extends Character {
   constructor(options) {
     super(options);
     this.name;
-    this.level;
+    this.power;
+    this.monster;
   }
 
   getName() {
-    this.name = document.querySelector(".monster-name").value;
+    this.name = document.querySelector(".monster-name").value.toLowerCase();
     return this.name;
   }
 
-
-
-  getMonsterLevel() {
-    this.level = cards[this.name].level;
-    return this.level;
+  getMonsterpower() {
+    this.power = cards[this.name].power;
+    return this.power;
   }
 }
 
@@ -283,25 +55,25 @@ const munchkin = new Munchkin({});
 
 const monster = new Monster({});
 
-var startButton = document.querySelector(".start-battle");
+const startButton = document.querySelector(".start-battle");
 
 startButton.onclick = function() {
   console.log("battle has started");
-  munchkin.getLevel();
+  munchkin.getpower();
   monster.getName();
   console.log(monster.name);
-  monster.getMonsterLevel();
+  monster.getMonsterpower();
   document.querySelector(".card").style.display = "block";
 };
 
 // let Monster = class {
-//     constructor(name, level, modifier, treasure) {
+//     constructor(name, power, modifier, treasure) {
 //       this.name = name;
-//       this.level = level;
+//       this.power = power;
 //       this.modifier = modifier;
 //       this.treasure = treasure;
 
-//       console.log(this.name + " is level " + this.level + ", and has " + this.treasure + " treasures.")
+//       console.log(this.name + " is power " + this.power + ", and has " + this.treasure + " treasures.")
 //     }
 //   };
 
