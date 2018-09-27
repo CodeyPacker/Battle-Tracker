@@ -80,7 +80,6 @@ const monsters = [
   }
 ];
 
-
 let munchkinModifier = document.getElementsByClassName("munchkin-modifier");
 
 class Munchkin {
@@ -108,15 +107,15 @@ class Munchkin {
  }
 
 function createMonster() {
-  let monsterName = document.querySelector(".monster-name").value.toLowerCase();
-  let newMonster = monsters.find(monster => monster.name === monsterName);
-  let name = newMonster.name;
-  let levels = newMonster.levels;
-  let power = newMonster.power;
-  let bad = newMonster.bad;
-  let abilities = newMonster.abilities;
-  let set = newMonster.set;
-  let treasure = newMonster.treasure;
+  let monsterName = document.querySelector(".monster-name").value.toLowerCase(),
+      newMonster = monsters.find(monster => monster.name === monsterName),
+      name = newMonster.name,
+      levels = newMonster.levels,
+      power = newMonster.power,
+      bad = newMonster.bad,
+      abilities = newMonster.abilities,
+      set = newMonster.set,
+      treasure = newMonster.treasure;
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
 
