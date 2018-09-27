@@ -80,14 +80,21 @@ const monsters = [
   }
 ];
 
-let munchkinModifier = document.getElementsByClassName("munchkin-modifier");
+// THE ELEMENTS THAT INFO GETS PRINTED TO
+let monsterNameDisplay = document.querySelector('.print-monster-name'),
+    monsterPowerDisplay = document.querySelector('.print-monster-power'),
+    monsterTreasureDisplay = document.querySelector('.print-monster-treasure'),
+    monsterLevelsDisplay = document.querySelector('.print-monster-levels'),
+    munchkinPowerDisplay = document.querySelector('.print-munchkin-power');
 
 class Munchkin {
   constructor(power) {
   this.power = power;
   }
   modifier(damage){
-  return this.power += damage;
+    this.power += damage;
+    munchkinPowerDisplay.innerHTML = `Munchkin power: ${this.power}`;
+    return this.power;
   }
  }
 
@@ -102,11 +109,14 @@ class Munchkin {
   this.treasure = details.treasure;
   }
   modifier(damage){
-    return this.power += damage;
+    this.power += damage
+    monsterPowerDisplay.innerHTML = `Monster power: ${this.power}`;
+    return this.power;
   }
  }
 
 function createMonster() {
+  // DELCARE VARIABLES FOR MONSTER BEING CREATED
   let monsterName = document.querySelector(".monster-name").value.toLowerCase(),
       newMonster = monsters.find(monster => monster.name === monsterName),
       name = newMonster.name,
@@ -116,11 +126,17 @@ function createMonster() {
       abilities = newMonster.abilities,
       set = newMonster.set,
       treasure = newMonster.treasure;
+  // PRINT THE VARIABLES TO THE CARD
+  monsterNameDisplay.innerHTML = `Monster name: ${name}`;
+  monsterPowerDisplay.innerHTML = `Monster power: ${power}`;
+  monsterTreasureDisplay.innerHTML = `Monster treasure: ${treasure}`;
+  monsterLevelsDisplay.innerHTML = `Monster levels: ${levels}`;
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
 
 function createMunchkin() {
   let power = parseInt(document.querySelector(".munchkin-power").value);
+  munchkinPowerDisplay.innerHTML = `Munchkin power: ${power}`;
   return munchkin = new Munchkin(power);
 }
 
