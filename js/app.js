@@ -1,5 +1,3 @@
-const startButton = document.querySelector(".start-battle");
-startButton.onclick = function() {
 const monsters = [
   {
     name: "abomination",
@@ -86,16 +84,16 @@ const monsters = [
 let munchkinModifier = document.getElementsByClassName("munchkin-modifier");
 
 class Munchkin {
-  constructor(level){
-  this.level = level;
+  constructor(power) {
+  this.power = power;
   }
   modifier(damage){
-  this.level += damage;
+  return this.power += damage;
   }
  }
 
  class Monster {
-  constructor(details){
+  constructor(details) {
   this.name = details.name;
   this.levels = details.levels;
   this.power = details.power;
@@ -105,27 +103,31 @@ class Munchkin {
   this.treasure = details.treasure;
   }
   modifier(damage){
-  return this.power += damage;
+    return this.power += damage;
   }
  }
 
+function createMonster() {
+  let monsterName = document.querySelector(".monster-name").value.toLowerCase();
+  let newMonster = monsters.find(monster => monster.name === monsterName);
+  let name = newMonster.name;
+  let levels = newMonster.levels;
+  let power = newMonster.power;
+  let bad = newMonster.bad;
+  let abilities = newMonster.abilities;
+  let set = newMonster.set;
+  let treasure = newMonster.treasure;
+  return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
+}
 
-let enteredMonster = document.querySelector(".monster-name").value.toLowerCase();
-let monster = monsters.find(monster => monster.name === enteredMonster);
-let name = monster.name;
-let levels = monster.levels;
-let power = monster.power;
-let bad = monster.bad;
-let abilities = monster.abilities;
-let set = monster.set;
-let treasure = monster.treasure;
-let munchkinLevel = parseInt(document.querySelector(".munchkin-power").value);
-let munchkin1 = new Munchkin(munchkinLevel);
+function createMunchkin() {
+  let power = parseInt(document.querySelector(".munchkin-power").value);
+  return munchkin = new Munchkin(power);
+}
 
-let monster1 = new Monster({name, levels, power, bad, abilities, set, treasure})
-console.log(monster1);
-console.log(`Power level: ${monster1.power}`);
-monster1.modifier(29);
-console.log(`The monsters power has increased by 28. Power level: ${monster1.power}`);
+const startButton = document.querySelector(".start-battle");
+startButton.onclick = function() {
+  createMonster();
+  createMunchkin();
 };
 
