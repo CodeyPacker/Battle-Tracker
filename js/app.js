@@ -89,6 +89,9 @@ let monsterNameDisplay = document.querySelector('.card__monster--name'),
     monsterAbilitiesDisplay = document.querySelector('.card__monster--abilities'),
     munchkinPowerDisplay = document.querySelector('.print-munchkin-power');
 
+// NEXT REFACTOR: CREATE A CHARACTER CLASS THAT MUCHKINS AND MONSTERS CAN EXTEND FROM
+
+// CREATE MUNCHKIN CLASS THAT HAS A MODIFIER METHOD ON IT'S __proto__
 class Munchkin {
   constructor(power) {
   this.power = power;
@@ -100,6 +103,7 @@ class Munchkin {
   }
  }
 
+ // CREATE MONSTER CLASS THAT HAS A MODIFIER METHOD ON IT'S __proto__
  class Monster {
   constructor(details) {
   this.name = details.name;
@@ -117,9 +121,12 @@ class Munchkin {
   }
  }
 
+  // CREATES A NEW MONSTER AFTER THE START BUTTON IS CLICKED
 function createMonster() {
   // DELCARE VARIABLES FOR MONSTER BEING CREATED
+  // GETS THE MONSTER NAME FROM THE USERS INPUT
   let monsterName = document.querySelector(".monster-name").value.toLowerCase(),
+  // SEARCHES THE MONSTERS OBJECT UNTIL IT FINDS A MATCHING MONSTER
       newMonster = monsters.find(monster => monster.name === monsterName),
       name = newMonster.name,
       levels = newMonster.levels,
@@ -128,6 +135,7 @@ function createMonster() {
       abilities = newMonster.abilities,
       set = newMonster.set,
       treasure = newMonster.treasure;
+
   // PRINT THE VARIABLES TO THE CARD
   monsterNameDisplay.innerHTML = `${name}`;
   monsterPowerDisplay.innerHTML = `Level ${power}`;
@@ -135,6 +143,7 @@ function createMonster() {
   monsterLevelsDisplay.innerHTML = `${levels} Level`;
   monsterBadStuffDisplay.innerHTML = `Bad Stuff: ${bad}`;
   monsterAbilitiesDisplay.innerHTML = `Abilities: ${abilities}`;
+  // RETURN THE MONSTER SO WE HAVE ACCESS TO MODIFY IT'S POWER
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
 
@@ -150,3 +159,17 @@ startButton.onclick = function() {
   createMunchkin();
 };
 
+// SELECT ALL BUTTONS WITH A CLASS OF MODIFIER AND STORE IN AN ARRAY
+const modifyTriggers = [...document.querySelectorAll('.modifier')];
+// ADD AN EVENT LISTENER TO EACH BUTTON IN THE ARRAY
+modifyTriggers.map((trigger) => {
+  trigger.addEventListener('click', () => {
+    // IF ITS A MONSTER BUTTON, RUN monster.modifier(button-value)
+    if (trigger.classList.contains('monster-modifier')) {
+      monster.modifier(parseInt(trigger.value));
+    // IF ITS A MUNCHKIN BUTTON, RUN munchkin.modifier(button-value)
+    } else if (trigger.classList.contains('munchkin-modifier')) {
+      munchkin.modifier(parseInt(trigger.value));
+    }
+  });
+});
