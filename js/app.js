@@ -86,6 +86,7 @@ let monsterNameDisplay = document.querySelector('.card__monster--name'),
     monsterTreasureDisplay = document.querySelector('.card__monster--treasure'),
     monsterLevelsDisplay = document.querySelector('.card__monster--levels'),
     monsterBadStuffDisplay = document.querySelector('.card__monster--badstuff'),
+    monsterAbilitiesDisplay = document.querySelector('.card__monster--abilities'),
     munchkinPowerDisplay = document.querySelector('.print-munchkin-power');
 
 class Munchkin {
@@ -111,7 +112,7 @@ class Munchkin {
   }
   modifier(damage){
     this.power += damage
-    monsterPowerDisplay.innerHTML = `Monster power: ${this.power}`;
+    monsterPowerDisplay.innerHTML = `Level ${this.power}`;
     return this.power;
   }
  }
@@ -128,11 +129,12 @@ function createMonster() {
       set = newMonster.set,
       treasure = newMonster.treasure;
   // PRINT THE VARIABLES TO THE CARD
-  monsterNameDisplay.innerHTML = `Monster name: ${name}`;
-  monsterPowerDisplay.innerHTML = `Monster power: ${power}`;
-  monsterTreasureDisplay.innerHTML = `Monster treasure: ${treasure}`;
-  monsterLevelsDisplay.innerHTML = `Monster levels: ${levels}`;
-  monsterBadStuffDisplay.innerHTML = `Monsters bad stuff: ${bad}`;
+  monsterNameDisplay.innerHTML = `${name}`;
+  monsterPowerDisplay.innerHTML = `Level ${power}`;
+  monsterTreasureDisplay.innerHTML = `${treasure} Treausre`;
+  monsterLevelsDisplay.innerHTML = `${levels} Level`;
+  monsterBadStuffDisplay.innerHTML = `Bad Stuff: ${bad}`;
+  monsterAbilitiesDisplay.innerHTML = `Abilities: ${abilities}`;
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
 

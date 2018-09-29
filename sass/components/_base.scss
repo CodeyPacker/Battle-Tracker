@@ -1,7 +1,15 @@
 // Base Variables/Colors
 $primary-font: 'Quicksand', sans-serif;
 $white: #fff;
+$purple: #5d2ae5;
+$teal: #41d3a2;
+$orange: #ff9000;
 
 body {
   font-family: $primary-font;
+}
+
+.padding-15 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
