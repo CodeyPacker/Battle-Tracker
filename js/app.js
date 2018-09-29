@@ -81,10 +81,11 @@ const monsters = [
 ];
 
 // THE ELEMENTS THAT INFO GETS PRINTED TO
-let monsterNameDisplay = document.querySelector('.print-monster-name'),
-    monsterPowerDisplay = document.querySelector('.print-monster-power'),
-    monsterTreasureDisplay = document.querySelector('.print-monster-treasure'),
-    monsterLevelsDisplay = document.querySelector('.print-monster-levels'),
+let monsterNameDisplay = document.querySelector('.card__monster--name'),
+    monsterPowerDisplay = document.querySelector('.card__monster--power'),
+    monsterTreasureDisplay = document.querySelector('.card__monster--treasure'),
+    monsterLevelsDisplay = document.querySelector('.card__monster--levels'),
+    monsterBadStuffDisplay = document.querySelector('.card__monster--badstuff'),
     munchkinPowerDisplay = document.querySelector('.print-munchkin-power');
 
 class Munchkin {
@@ -131,6 +132,7 @@ function createMonster() {
   monsterPowerDisplay.innerHTML = `Monster power: ${power}`;
   monsterTreasureDisplay.innerHTML = `Monster treasure: ${treasure}`;
   monsterLevelsDisplay.innerHTML = `Monster levels: ${levels}`;
+  monsterBadStuffDisplay.innerHTML = `Monsters bad stuff: ${bad}`;
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
 

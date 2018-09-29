@@ -2,13 +2,11 @@ body {
   font-family: "Quicksand", sans-serif; }
 
 .card {
-  display: block;
-  margin: 15px auto; }
-
-.card {
-  min-width: 230px;
-  max-width: 300px;
-  min-height: 400px;
   margin: 0 auto;
+  width: 300px;
+  height: 450px;
+  min-height: 400px;
   border-radius: 10px;
-  background-color: teal; }
+  -webkit-box-shadow: 0px 2px 10px 0px #5c5c5c;
+  -moz-box-shadow: 0px 2px 10px 0px #5c5c5c;
+  box-shadow: 0px 2px 10px 0px #5c5c5c; }
