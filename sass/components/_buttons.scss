@@ -1,0 +1,14 @@
+button {
+  border-radius: 5px;
+  margin-bottom: 22px;
+  padding: 10px 40px;
+  font-size: 17px;
+
+  &.filled {
+    color: $white;
+
+    &.purple {
+      background-color: $purple;
+    }
+  }
+}

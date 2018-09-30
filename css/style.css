@@ -45,13 +45,56 @@ body {
   -moz-box-shadow: 0px 1px 5px 0px #a3a3a3;
   box-shadow: 0px 1px 5px 0px #a3a3a3; }
 
+.card__input--highlight {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 150px;
+  margin-right: auto;
+  text-align: right;
+  padding: 2px;
+  background-color: gold;
+  border-radius: 1px;
+  color: black;
+  -webkit-box-shadow: 0px 1px 5px 0px #a3a3a3;
+  -moz-box-shadow: 0px 1px 5px 0px #a3a3a3;
+  box-shadow: 0px 1px 5px 0px #a3a3a3; }
+
 .before-battle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: margin-left .4s;
   min-height: 400px; }
   .before-battle.animated {
     margin-left: -200%;
     min-height: 0;
     height: 0; }
+  .before-battle .instructions {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 22px; }
+  .before-battle input {
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    background-color: #fff;
+    opacity: .8; }
+    .before-battle input.border {
+      border-radius: 5px; }
+      .before-battle input.border.purple {
+        border: 2px solid #5d2ae5;
+        color: #5d2ae5; }
+        .before-battle input.border.purple::placeholder {
+          color: #5d2ae5; }
+    .before-battle input.filled {
+      color: #fff; }
+      .before-battle input.filled.purple {
+        background-color: #5d2ae5; }
+      .before-battle input.filled::placeholder {
+        color: #fff; }
 
 .during-battle {
   display: flex;
@@ -93,3 +136,13 @@ body {
   margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px; }
+
+button {
+  border-radius: 5px;
+  margin-bottom: 22px;
+  padding: 10px 40px;
+  font-size: 17px; }
+  button.filled {
+    color: #fff; }
+    button.filled.purple {
+      background-color: #5d2ae5; }

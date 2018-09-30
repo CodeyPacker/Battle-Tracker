@@ -15,9 +15,12 @@
   <div class="card">
     <!-- Step 1 -- User enters monster name and character level -->
     <div class="animate before-battle">
-      <input type="text" placeholder="Enter Monster Name" class="monster-name"><br>
-      <input type="number" placeholder="Munchkin Level" class="munchkin-power"><br>
-      <button class="start-battle">Start</button>
+      <p class="instructions"></p>
+      <p class="card__input--highlight">Monster Name</p>
+      <input type="text" placeholder="Monster" class="monster-name border purple"><br>
+      <p class="card__input--highlight">Munchkin Power</p>
+      <input type="number" placeholder="Total Power + Level" class="munchkin-power border purple"><br>
+      <button class="start-battle filled purple">Start</button>
     </div>
 
     <!-- Step 2 -- Battle has started -->
