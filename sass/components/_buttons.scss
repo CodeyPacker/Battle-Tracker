@@ -1,0 +1,77 @@
+button {
+  border-radius: 5px;
+  margin-bottom: 22px;
+  padding: 10px 20px;
+  font-size: 17px;
+
+  &.start-battle {
+    padding: 10px 40px;
+    margin-top: auto;
+  }
+
+  &.filled {
+    color: $white;
+
+    &.purple {
+      background-color: $purple;
+    }
+
+    &.gold {
+      background-color: lighten(gold, 10%);
+      color: black;
+    }
+  }
+
+  &.border {
+    background-color: $white;
+
+    &.purple {
+      border: 2px solid $purple;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+
+  @media screen and (min-width: 400px){
+    width: 300px;
+  }
+
+  .buttons-munchkin,
+  .buttons-monster {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    box-sizing: border-box;
+  }
+
+  .buttons-munchkin {
+    margin-left: -200%;
+    transition: margin-left .4s;
+    
+    &.animated {
+      margin-left: 0;
+      transition: all 1s;
+    }
+  }
+
+  .buttons-monster {
+    margin-right: -200%;
+    transition: margin-right .4s;
+    
+    &.animated {
+      margin-right: 0;
+      transition: all 1s;
+    }
+  }
+
+  .current-winner {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+  }
+}
