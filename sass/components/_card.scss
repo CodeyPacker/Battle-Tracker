@@ -20,14 +20,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: $purple;
   font-weight: bold;
-  transition: border-bottom .4s;
+  transition: border-top .4s;
   
   &.animated {
-    border-bottom: 8px solid $purple;
+    border-top: 8px solid $purple;
   }
 }
 
@@ -144,7 +145,7 @@
 .card__monster--rewards {
   display: flex;
   justify-content: space-between;
-  margin-top: auto;
+  margin-bottom: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: $purple;
@@ -166,4 +167,8 @@
   margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.card__monster--badstuff {
+  margin-bottom: 15px;
 }

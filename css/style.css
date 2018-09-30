@@ -24,13 +24,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: #5d2ae5;
   font-weight: bold;
-  transition: border-bottom .4s; }
+  transition: border-top .4s; }
   .card-heading.animated {
-    border-bottom: 8px solid #5d2ae5; }
+    border-top: 8px solid #5d2ae5; }
 
 .card__heading--highlight {
   display: flex;
@@ -119,7 +120,7 @@ body {
 .card__monster--rewards {
   display: flex;
   justify-content: space-between;
-  margin-top: auto;
+  margin-bottom: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: #5d2ae5;
@@ -137,12 +138,56 @@ body {
   padding-left: 15px;
   padding-right: 15px; }
 
+.card__monster--badstuff {
+  margin-bottom: 15px; }
+
 button {
   border-radius: 5px;
   margin-bottom: 22px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   font-size: 17px; }
+  button.start-battle {
+    padding: 10px 40px;
+    margin-top: auto; }
   button.filled {
     color: #fff; }
     button.filled.purple {
       background-color: #5d2ae5; }
+    button.filled.gold {
+      background-color: #ffdf33;
+      color: black; }
+  button.border {
+    background-color: #fff; }
+    button.border.purple {
+      border: 2px solid #5d2ae5; }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto; }
+  @media screen and (min-width: 400px) {
+    .buttons {
+      width: 300px; } }
+  .buttons .buttons-munchkin,
+  .buttons .buttons-monster {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    box-sizing: border-box; }
+  .buttons .buttons-munchkin {
+    margin-left: -200%;
+    transition: margin-left .4s; }
+    .buttons .buttons-munchkin.animated {
+      margin-left: 0;
+      transition: all 1s; }
+  .buttons .buttons-monster {
+    margin-right: -200%;
+    transition: margin-right .4s; }
+    .buttons .buttons-monster.animated {
+      margin-right: 0;
+      transition: all 1s; }
+  .buttons .current-winner {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2; }
