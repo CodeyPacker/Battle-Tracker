@@ -1,13 +1,14 @@
+// &.animated classes get added when the battle has started
 .card {
-  display: flex;
-  flex-direction: column;
-  margin: 15px auto;
   width: 90vw;
   min-height: 400px;
   border-radius: 10px;
+  margin: 20px auto;
   -webkit-box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
   -moz-box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
   box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
+  transition: margin-left .3s;
+  overflow: hidden;
   
   @media screen and (min-width: 400px){
     width: 300px;
@@ -23,11 +24,17 @@
   padding-right: 15px;
   color: $purple;
   font-weight: bold;
-  border-bottom: 8px solid $purple;
+  transition: border-bottom .4s;
+  
+  &.animated {
+    border-bottom: 8px solid $purple;
+  }
 }
 
 .card__heading--highlight {
-  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+  width: 90px;
   text-align: right;
   padding: 2px;
   background-color: gold;
@@ -36,6 +43,30 @@
   -webkit-box-shadow: 0px 1px 5px 0px rgba(163,163,163,1);
   -moz-box-shadow: 0px 1px 5px 0px rgba(163,163,163,1);
   box-shadow: 0px 1px 5px 0px rgba(163,163,163,1);
+}
+
+.before-battle {
+  transition: margin-left .4s;
+  min-height: 400px;
+
+  &.animated {
+    margin-left: -200%;
+    min-height: 0;
+    height: 0;
+  }
+}
+
+.during-battle {
+  display: flex;
+  flex-direction: column;
+  margin-left: -200%;
+  height: 0;
+  transition: margin-left .4s;
+  
+  &.animated {
+    min-height: 400px;
+    margin-left: 0;
+  }
 }
 
 .card__monster--name {
@@ -57,6 +88,16 @@
   padding-left: 15px;
   padding-right: 15px;
   color: $purple;
+  transition: justify-content .4s;
+
+  .card__monster--levels {
+    margin-right: 200%;
+    transition: margin-right .4s;
+
+    &.animated {
+      margin-right: 0;
+    }
+  }
 }
 
 .card__monster--badstuff,
@@ -66,5 +107,3 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-
-// Padding for the details sections

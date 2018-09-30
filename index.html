@@ -13,20 +13,31 @@
 
 <body>
   <div class="card">
-    <div class="card-heading">
-      <p class="card__monster--power">Level 2</p>
-      <h2 class="card__monster--name">Bullseye</h2>
+    <!-- Step 1 -- User enters monster name and character level -->
+    <div class="animate before-battle">
+      <input type="text" placeholder="Enter Monster Name" class="monster-name"><br>
+      <input type="number" placeholder="Munchkin Level" class="munchkin-power"><br>
+      <button class="start-battle">Start</button>
     </div>
-    <p class="card__abilities--heading card__heading--highlight">Abilities</p>
-    <p class="card__monster--abilities">He never misses. Combat bonuses count double for him. He is that good.</p>
-      <p class="card__heading--highlight">Bad Stuff</p>
-      <p class="card__monster--badstuff">Lose your armor. If you arent wearing any, lose two levels.</p>
-    <div class="card__monster--rewards">
-      <p class="card__monster--treasure">1 Treasure</p>
-      <p class="card__monster--levels">1 Level</p>
+
+    <!-- Step 2 -- Battle has started -->
+    <div class="animate during-battle">
+      <div class="card-heading animate">
+        <p class="card__monster--power">Level 2</p>
+        <h2 class="card__monster--name">Bullseye</h2>
+      </div>
+      <p class="card__abilities--heading card__heading--highlight">Abilities</p>
+      <p class="card__monster--abilities">He never misses. Combat bonuses count double for him. He is that good.</p>
+        <p class="card__heading--highlight">Bad Stuff</p>
+        <p class="card__monster--badstuff">Lose your armor. If you arent wearing any, lose two levels.</p>
+      <div class="card__monster--rewards animate">
+        <p class="card__monster--treasure">1 Treasure</p>
+        <p class="card__monster--levels animate">1 Level</p>
+      </div>
     </div>
   </div>
 
+  <div class="print-munchkin-power"></div>
   <!-- Monster modifiers -->
   <button class="modifier monster-modifier" value="1">+1</button>
   <button class="modifier monster-modifier" value="-1">-1</button>
@@ -37,13 +48,7 @@
   <button class="modifier munchkin-modifier" value="1">+1</button>
   <button class="modifier munchkin-modifier" value="-1">-1</button>
   <button class="modifier munchkin-modifier" value="5">+5</button>
-  <button class="modifier munchkin-modifier" value="-5">-5</button>
-  
-  <div class="print-munchkin-power"></div>
-
-  <input type="text" placeholder="Enter Monster Name" class="monster-name"><br>
-  <input type="number" placeholder="Munchkin Level" class="munchkin-power"><br>
-  <button class="start-battle">Start</button>
+  <button class="modifier munchkin-modifier" value="-5">-5</button>  
   <footer>
     <script src="js/app.js"></script>
   </footer>

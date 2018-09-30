@@ -136,13 +136,13 @@ function createMonster() {
       set = newMonster.set,
       treasure = newMonster.treasure;
 
-  // PRINT THE VARIABLES TO THE CARD
+  // PRINT THE VARIABLES/APPLY ANIMATIONS TO THE CARD
   monsterNameDisplay.innerHTML = `${name}`;
   monsterPowerDisplay.innerHTML = `Level ${power}`;
   monsterTreasureDisplay.innerHTML = `${treasure} Treausre`;
   monsterLevelsDisplay.innerHTML = `${levels} Level`;
-  monsterBadStuffDisplay.innerHTML = `Bad Stuff: ${bad}`;
-  monsterAbilitiesDisplay.innerHTML = `Abilities: ${abilities}`;
+  monsterBadStuffDisplay.innerHTML = `${bad}`;
+  monsterAbilitiesDisplay.innerHTML = `${abilities}`;
   // RETURN THE MONSTER SO WE HAVE ACCESS TO MODIFY IT'S POWER
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
@@ -157,6 +157,11 @@ const startButton = document.querySelector(".start-battle");
 startButton.onclick = function() {
   createMonster();
   createMunchkin();
+  const animated = [...document.querySelectorAll('.animate')];
+
+  animated.map((animate) => {
+    animate.classList.add('animated');
+  });
 };
 
 // SELECT ALL BUTTONS WITH A CLASS OF MODIFIER AND STORE IN AN ARRAY
