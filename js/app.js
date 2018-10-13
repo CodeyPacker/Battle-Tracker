@@ -88,6 +88,7 @@ let monsterNameDisplay = document.querySelector('.card__monster--name'),
     monsterBadStuffDisplay = document.querySelector('.card__monster--badstuff'),
     monsterAbilitiesDisplay = document.querySelector('.card__monster--abilities'),
     munchkinPowerDisplay = document.querySelector('.print-munchkin-power');
+    monsterVersus = document.querySelector('.print-monster-power');
 
 // NEXT REFACTOR: CREATE A CHARACTER CLASS THAT MUCHKINS AND MONSTERS CAN EXTEND FROM
 
@@ -98,7 +99,7 @@ class Munchkin {
   }
   modifier(damage){
     this.power += damage;
-    munchkinPowerDisplay.innerHTML = `Munchkin power: ${this.power}`;
+    munchkinPowerDisplay.innerHTML = `${this.power}`;
     return this.power;
   }
  }
@@ -116,7 +117,7 @@ class Munchkin {
   }
   modifier(damage){
     this.power += damage
-    monsterPowerDisplay.innerHTML = `Level ${this.power}`;
+    monsterVersus.innerHTML = `${this.power}`;
     return this.power;
   }
  }
@@ -143,18 +144,20 @@ function createMonster() {
   monsterLevelsDisplay.innerHTML = `${levels} Level`;
   monsterBadStuffDisplay.innerHTML = `${bad}`;
   monsterAbilitiesDisplay.innerHTML = `${abilities}`;
+  monsterVersus.innerHTML = `${power}`;
   // RETURN THE MONSTER SO WE HAVE ACCESS TO MODIFY IT'S POWER
   return monster = new Monster({name, levels, power, bad, abilities, set, treasure})
 }
 
 function createMunchkin() {
   let power = parseInt(document.querySelector(".munchkin-power").value);
-  munchkinPowerDisplay.innerHTML = `Munchkin power: ${power}`;
+  munchkinPowerDisplay.innerHTML = `${power}`;
   return munchkin = new Munchkin(power);
 }
 
 const startButton = document.querySelector(".start-battle");
 startButton.onclick = function() {
+  // buttonContainer = document.querySelector('.buttons').classList.remove('hide');
   createMonster();
   createMunchkin();
   const animated = [...document.querySelectorAll('.animate')];
