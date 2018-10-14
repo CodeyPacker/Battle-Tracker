@@ -88,7 +88,8 @@ let monsterNameDisplay = document.querySelector('.card__monster--name'),
     monsterBadStuffDisplay = document.querySelector('.card__monster--badstuff'),
     monsterAbilitiesDisplay = document.querySelector('.card__monster--abilities'),
     munchkinPowerDisplay = document.querySelector('.print-munchkin-power');
-    monsterVersus = document.querySelector('.print-monster-power');
+    monsterVersus = document.querySelector('.print-monster-power'),
+    powerDifference = document.querySelector('.difference');
 
 // NEXT REFACTOR: CREATE A CHARACTER CLASS THAT MUCHKINS AND MONSTERS CAN EXTEND FROM
 
@@ -96,11 +97,28 @@ let monsterNameDisplay = document.querySelector('.card__monster--name'),
 class Munchkin {
   constructor(power) {
   this.power = power;
+  this.difference;
   }
+
   modifier(damage){
     this.power += damage;
     munchkinPowerDisplay.innerHTML = `${this.power}`;
     return this.power;
+  }
+
+  battleDifference () {
+    this.difference = this.power - monster.power;
+
+    if (this.difference > 0) {
+      powerDifference.classList.remove('red');
+      powerDifference.classList.add('green');
+    } else {
+      powerDifference.classList.remove('green');
+      powerDifference.classList.add('red');
+    }
+
+    powerDifference.innerHTML = this.difference;
+    return this.difference;
   }
  }
 
@@ -160,6 +178,7 @@ startButton.onclick = function() {
   // buttonContainer = document.querySelector('.buttons').classList.remove('hide');
   createMonster();
   createMunchkin();
+  munchkin.battleDifference();
   const animated = [...document.querySelectorAll('.animate')];
 
   animated.map((animate) => {
@@ -175,9 +194,11 @@ modifyTriggers.map((trigger) => {
     // IF ITS A MONSTER BUTTON, RUN monster.modifier(button-value)
     if (trigger.classList.contains('monster-modifier')) {
       monster.modifier(parseInt(trigger.value));
+      munchkin.battleDifference();
     // IF ITS A MUNCHKIN BUTTON, RUN munchkin.modifier(button-value)
     } else if (trigger.classList.contains('munchkin-modifier')) {
       munchkin.modifier(parseInt(trigger.value));
+      munchkin.battleDifference();
     }
   });
 });
