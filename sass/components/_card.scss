@@ -1,17 +1,19 @@
 // &.animated classes get added when the battle has started
 .card {
-  width: 90vw;
-  min-height: 400px;
-  border-radius: 10px;
-  margin: 20px auto;
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
-  -moz-box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
-  box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
+  width: 100%;
+  min-height: 350px;
   transition: margin-left .3s;
   overflow: hidden;
   
-  @media screen and (min-width: 400px){
+  // Styles that make it look like a card
+  @media screen and (min-width: 376px){
     width: 300px;
+    min-height: 375px;
+    margin: 20px auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
+    box-shadow: 0px 2px 10px 0px rgba(92,92,92,1);
   }
 }
 
@@ -20,16 +22,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: $purple;
   font-weight: bold;
   transition: border-top .4s;
   
-  &.animated {
-    border-top: 8px solid $purple;
-  }
+  // &.animated {
+  //   border-bottom: 8px solid $purple;
+  // }
 }
 
 .card__heading--highlight {
@@ -64,10 +65,13 @@
 .before-battle {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   transition: margin-left .4s;
-  min-height: 400px;
+  justify-content: center;
+
+  @media screen and (max-width: 376px){ 
+    min-height: 100vh;
+  }
 
   &.animated {
     margin-left: -200%;
@@ -125,8 +129,13 @@
   transition: margin-left .4s;
   
   &.animated {
-    min-height: 400px;
+    min-height: 350px;
     margin-left: 0;
+
+    @media screen and (max-width: 376px){
+      border-bottom: 6px solid $purple;
+    }
+
   }
 }
 
@@ -145,7 +154,6 @@
 .card__monster--rewards {
   display: flex;
   justify-content: space-between;
-  margin-bottom: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: $purple;
@@ -159,6 +167,15 @@
       margin-right: 0;
     }
   }
+
+  &.animated {
+
+    @media screen and (min-width: 376px){
+      margin-top: auto;
+    }
+    
+  }
+
 }
 
 .card__monster--badstuff,
@@ -171,4 +188,8 @@
 
 .card__monster--badstuff {
   margin-bottom: 15px;
+}
+
+.current-winner {
+  display: none;
 }

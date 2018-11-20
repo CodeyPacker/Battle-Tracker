@@ -1,0 +1,20 @@
+.versus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.difference {
+  font-size: 60px;
+  align-self: center;
+  
+  &.green {
+    color: green;
+  }
+
+  &.red {
+    color: red;
+  }
+}

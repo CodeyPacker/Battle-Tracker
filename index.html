@@ -23,11 +23,11 @@
       <button class="start-battle filled purple">Start</button>
     </div>
 
-    <!-- Step 2 -- Battle has started -->
+    <!-- Step 2 Battle has started -->
     <div class="animate during-battle">
-      <div class="card__monster--rewards animate">
-        <p class="card__monster--treasure">1 Treasure</p>
-        <p class="card__monster--levels animate">1 Level</p>
+      <div class="card-heading animate">
+          <p class="card__monster--power">Level 2</p>
+          <h2 class="card__monster--name">Bullseye</h2>
       </div>
       <div class="middle-content">
         <p class="card__abilities--heading card__heading--highlight">Abilities</p>
@@ -35,30 +35,39 @@
         <p class="card__heading--highlight">Bad Stuff</p>
         <p class="card__monster--badstuff">Lose your armor. If you arent wearing any, lose two levels.</p>
       </div>
-      <div class="card-heading animate">
-          <p class="card__monster--power">Level 2</p>
-          <h2 class="card__monster--name">Bullseye</h2>
+      <div class="card__monster--rewards animate">
+        <p class="card__monster--treasure">1 Treasure</p>
+        <p class="card__monster--levels animate">1 Level</p>
       </div>
     </div>
   </div>
 
-  <div class="print-munchkin-power"></div>
+  <div class="versus">
+    <div class="munchkin">
+      <h3>Munchkin</h3>
+      <p class="print-munchkin-power"></p>
+    </div>
+    <div class="monster">
+      <h3>Monster</h3>
+      <p class="print-monster-power"></p>
+    </div>
+  </div>
 
   <div class="buttons">
     <div class="buttons-munchkin animate">
       <!-- Munchkin modifiers -->
-      <p>Munchkin</p>
       <button class="modifier border purple munchkin-modifier" value="1">+1</button>
       <button class="modifier border purple munchkin-modifier" value="-1">-1</button>
       <button class="modifier border purple munchkin-modifier" value="5">+5</button>
       <button class="modifier border purple munchkin-modifier" value="-5">-5</button>
     </div>
 
-    <div class="current-winner">The current winner</div>
+    <!-- <div class="current-winner">The current winner</div> -->
+    <div class="difference">+5</div>
+
 
     <div class="buttons-monster animate">
       <!-- Monster modifiers -->
-      <p>Monster</p>
       <button class="modifier filled purple monster-modifier" value="1">+1</button>
       <button class="modifier filled purple monster-modifier" value="-1">-1</button>
       <button class="modifier filled purple monster-modifier" value="5">+5</button>
