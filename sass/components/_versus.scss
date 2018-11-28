@@ -9,12 +9,12 @@
 .difference {
   font-size: 60px;
   align-self: center;
-  
+
   &.green {
-    color: green;
+    color: #039d03;
   }
 
   &.red {
-    color: red;
+    color: firebrick;
   }
 }

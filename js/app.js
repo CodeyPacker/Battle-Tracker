@@ -1,5 +1,15 @@
 const monsters = [
   {
+    name: "jerry's mytholog",
+    set: "rick and morty",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "Codependency is a bitch. Can join Beth's Mytholog in combat without the use of a wandering monster card. Together, they get an extra +5.",
+    bad: "Pathetic! -5 in your next combat."
+  },
+  {
     name: "abomination",
     set: "marvel",
     power: 14,
