@@ -58,7 +58,7 @@ const weston = [{
     power: 2,
     treasure: 1,
     levels: 2,
-    abilities: "+4 against femails. +4 against pirates. So KY00T!",
+    abilities: "+4 against females. +4 against pirates. So KY00T!",
     bad: "Viking hairballs! Lose a level."
   },
   {
