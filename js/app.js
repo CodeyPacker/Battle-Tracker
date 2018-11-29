@@ -1,4 +1,4 @@
-const jenny = [
+const weston = [
   {
     name: "monster 1",
     set: "set",
