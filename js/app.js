@@ -144,26 +144,6 @@ const weston = [{
   }
 ];
 
-const cody = [{
-    name: "monster 1",
-    set: "set",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "Abilities",
-    bad: "Bad stuff"
-  },
-  {
-    name: "monster 2",
-    set: "set",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "Abilities",
-    bad: "Bad stuff"
-  }
-];
-
 const monsters = [{
     name: "jerry's mytholog",
     set: "rick and morty",
