@@ -30,8 +30,10 @@ const cody = [
     power: 1,
     treasure: 1,
     levels: 1,
-    abilities: "Abilities",
-    bad: "Bad stuff"
+    abilities:
+      "Abilities",
+    bad: 
+      "Bad stuff"
   },
   {
     name: "monster 2",
@@ -39,8 +41,10 @@ const cody = [
     power: 1,
     treasure: 1,
     levels: 1,
-    abilities: "Abilities",
-    bad: "Bad stuff"
+    abilities: 
+      "Abilities",
+    bad:
+      "Bad stuff"
   }
 ];
 
@@ -541,29 +545,18 @@ const monsters = [
       "Lose two levels. Everyone else loses one level. Discard any Guns you have in play."
   },
   {
-    name: "abomination",
+    name: "lizard",
     set: "marvel",
-    power: 14,
-    treasure: 4,
-    levels: 1,
-    abilities:
-      "-4 against Hulk. Players in combat with him do not get any combat bonuses from items with a bonus of +3 or less",
-    bad:
-      "Lose two levels and discard two cards from your hand"
-  },
-  {
-    name: "absorbing man",
-    set: "marvel",
-    power: 2,
+    power: 1,
     treasure: 1,
     levels: 1,
     abilities:
-      "If the surface you are playing on is glass: +1, wood: +2, plastic: +4, metal: +8, other (including multiple materials): + 10.",
+      "When he enters combat, if the top card of the door discards is a monster, he gets +3 and its combat abilities.",
     bad:
-      "He crushes your stuff. Loses an equipped item"
+      "His genetic experiments cause you to change gender, and you have -5 in your next combat."
   },
   {
-    name: "aim soldier",
+    name: "a.i.m. soldier",
     set: "marvel",
     power: 1,
     treasure: 1,
@@ -574,15 +567,290 @@ const monsters = [
       "He steals your tech. Discard at least 500 gold pieces worth of items."
   },
   {
+    name: "hydra soldier",
+    set: "marvel",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "When he enters combat, he gets +2 for each Ally in the top five cards of the treasure discards.",
+    bad:
+      "\"Hail HYDRA!\" Lose a level."
+  },
+  {
+    name: "vulture",
+    set: "marvel",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "+4 against Spider-friends",
+    bad:
+      "He flies off with your stuff. Discard two cards."
+  },
+  {
+    name: "scorpion",
+    set: "marvel",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "May join any combat without a wandering monster card. +2 against Spider-Friends.",
+    bad: 
+      "Toxic Sting! Discard a card from your hand at random."
+  },
+  {
+    name: "absorbing man",
+    set: "marvel",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "If the surface you are playing on is GLASS: +1, WOOD: +2, PLASTIC: +4, METAL: +8, OTHER: +10.",
+    bad: 
+      "He crushes your stuff. Lose an equipped item."
+  },
+  {
+    name: "sandman",
+    set: "marvel",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "Players in combat with him do not get ANY bonuses from hand items. -2 to run away.",
+    bad: 
+      "Lose all Equipped hand items as they slip through your fingers."
+  },
+  {
+    name: "shocker",
+    set: "marvel",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "+3 against anyone wearing armor.",
+    bad: 
+      "Shocked and stunned. -5 in your next combat."
+  },
+  {
+    name: "bullseye",
+    set: "marvel",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "He never misses. Combat bonuses count double for him. He's that good.",
+    bad: 
+      "Lose your armor. If you aren't wearing any, lose two levels."
+  },
+  {
+    name: "the leader",
+    set: "marvel",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "He is way smarter than you could ever hope to be. You cannot use any powers while in combat with him.",
+    bad: 
+      "Lose all your powers, fool."
+  },
+  {
+    name: "kraven the hunter",
+    set: "marvel",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+2 against anyone with no hand items equipped.",
+    bad: 
+      "The ultimate hunter... And you are his prey. You are dead."
+  },
+  {
     name: "arnim zola",
     set: "marvel",
     power: 4,
     treasure: 2,
     levels: 1,
     abilities: 
-      "+2 for each affiliation of the player(s) in combat",
+      "+2 for each affiliation of the player(s) in combat.",
     bad: 
       "Lose your affiliation(s)."
+  },
+  {
+    name: "crossbones",
+    set: "marvel",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "If captain america is in play when he enters combat, he gets +5. Then, Captain America must be discarded.",
+    bad: 
+      "Roll the bones (die) and lose half that many levels, rounded up."
+  },
+  {
+    name: "rhino",
+    set: "marvel",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+6 if he enters combat via a wandering monster card.",
+    bad: 
+      "Lose your armor."
+  },
+  {
+    name: "electro",
+    set: "marvel",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+2 for each electronic device on the table when he enters combat.",
+    bad: 
+      "Skip your next (full) turn."
+  },
+  {
+    name: "hobgoblin",
+    set: "marvel",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+3 against Spider-friends.",
+    bad: 
+      "The next time you attempt to run away, you automatically fail."
+  },
+  {
+    name: "super-adaptoid",
+    set: "marvel",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "-3 against Avengers. +1 for every Ally and power in play.",
+    bad: 
+      "Lose an Ally or a power, your choice. If you have neither, lose a level."
+  },
+  {
+    name: "klaw",
+    set: "marvel",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "-3 against black panther. +3 if there is music playing in the room. +6 if vibranium is in play, when he enters combat.",
+    bad: 
+      "Deafened by his sonic attacks, you cannot respond to requests for help until you go up a level."
+  },
+  {
+    name: "the unspoken",
+    set: "marvel",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+3 against Inhumans. +2 against anyone with no Hand Items equipped.",
+    bad: 
+      "Lose your affiliation. If you have none, lose a level."
+  },
+  {
+    name: "doctor octopus",
+    set: "marvel",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+2 for each Hand Item and Footgear the player(s) in combat have equipped.",
+    bad: 
+      "He grabs your stuff and makes off with it. Lose all equipped Hand Items and Footgear."
+  },
+  {
+    name: "taskmaster",
+    set: "marvel",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "He gets +2 for each power you have.",
+    bad: 
+      "Lose a power and a level."
+  },
+  {
+    name: "madame hydra",
+    set: "marvel",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+4 against males. Allies grant no benefits to the players' side.",
+    bad: 
+      "Roll the die and lose half that many levels, rounded up."
+  },
+  {
+    name: "mysterio",
+    set: "marvel",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "When he enters combat, the player(s) he is fighting suffers the effects of the top two traps in the door discards.",
+    bad: 
+      "Roll the die and discard that many cards."
+  },
+  {
+    name: "winter soldier",
+    set: "marvel",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "No one can help you in combat. You must fight him alone. You may not discard an Ally for automatic escape.",
+    bad: 
+      "Skip your next (full) turn."
+  },
+  {
+    name: "yellowjacket",
+    set: "marvel",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+3 against Avengers. +4 against players level 6 or higher. -4 against players level 5 or below.",
+    bad: 
+      "Lose an Ally or Item giving you the biggest bonus."
+  },
+  {
+    name: "maximus",
+    set: "marvel",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+5 against Inhumans. -3 against anyone with two or more powers.",
+    bad: 
+      "Lose a power and levels equal to its rank."
+  },
+  {
+    name: "mandarin",
+    set: "marvel",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "When he enters combat, he gets +1 for each ring all players (not only those in combat) are wearing on their fingers. -4 against Iron Man.",
+    bad: 
+      "Lose all non-one-shot items you have equipped."
+  },
+  {
+    name: "venom",
+    set: "marvel",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "-3 against Spider-friends. You may discard Klaw's Sonic Blaster to automatically defeat him (gain treasures, but no levels).",
+    bad: 
+      "If you are wearing armor, you have -5 in your next combat. If not, -10!"
   },
   {
     name: "baron von strucker",
@@ -596,37 +864,136 @@ const monsters = [
       "Lose at least 1,000 gold pieces worth of items."
   },
   {
-    name: "baron zemo",
-    set: "marvel",
-    power: 16,
-    treasure: 4,
-    levels: 2,
-    abilities:
-      "Draw and discard the top two cards of the door deck when he enters combat. He gets +5 for each monster revealed this way",
-    bad:
-      "Lose your footgear, and the next time you attempt to run away, you automatically fail."
-  },
-  {
-    name: "bullseye",
-    set: "marvel",
-    power: 2,
-    treasure: 1,
-    levels: 1,
-    abilities:
-      "He never misses. Combat bonuses count double for him. He is that good",
-    bad:
-      "Lose your armor. If you arent wearing any, lose two levels"
-  },
-  {
     name: "carnage",
     set: "marvel",
     power: 12,
     treasure: 3,
     levels: 1,
-    abilities:
-      "+4 against Spider-Friends. -2 against Avengers. May join venom in combat without the use of a wandering monster card.",
+    abilities: 
+      "+4 against Spider-friends. -2 against Avengers. May join Venom in combat without the use of a Wandering Monster card.",
     bad: 
       "You are dead and you lose a level."
+  },
+  {
+    name: "green goblin",
+    set: "marvel",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+3 against Spider-friends. Traps played while he is in combat give him a +3 bonus (in addition to their normal effects).",
+    bad: 
+      "Lose your Headgear and Armor."
+  },
+  {
+    name: "kingpin",
+    set: "marvel",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+5 against the highest level player. If you are the lowest level player and in combat alone, he won't fight you. Instead you get a treasure.",
+    bad: 
+      "Your level becomes equal to the lowest level player."
+  },
+  {
+    name: "m.o.d.o.k.",
+    set: "marvel",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities: 
+      "If the Cosmic Cube is in play when he enters combat, he gets +10.",
+    bad: 
+      "It's right there in his name. You are dead."
+  },
+  {
+    name: "norman osborn",
+    set: "marvel",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities: 
+      "Monsters of level 4 or below may join him in combat without the use of a wandering monster card.",
+    bad: 
+      "Lose an Ally and an affiliation."
+  },
+  {
+    name: "abomination",
+    set: "marvel",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities: 
+      "-4 against hulk. Players in combat with him do not get any combat bonuses from items with a bonus of +3 or less.",
+    bad: 
+      "Lose two levels and discard two cards from your hand."
+  },
+  {
+    name: "baron zemo",
+    set: "marvel",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "Draw and discard the top two cards of the door deck when he enteres combat. He gets +5 for each monster card revealed this way.",
+    bad: 
+      "Lose your footgear, and the next time you attempt to run away, you automatically fail."
+  },
+  {
+    name: "malekith",
+    set: "marvel",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "-4 against anyone wearing armor. +2 for each one-shot item the player(s) in combat have in play when he enters combat.",
+    bad: 
+      "Lose an Ally and discard three cards."
+  },
+  {
+    name: "kang",
+    set: "marvel",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "Master time-traveler. He knows all your plans. Players may not use one-shots to aid their side in combat.",
+    bad: 
+      "Go back in time and suffer the bad stuff of the top two monsters in the door discards."
+  },
+  {
+    name: "red skull",
+    set: "marvel",
+    power: 18,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "-4 against Captain America. When he enters combat, lose an Ally, and he gets its bonus. Will not pursue anyone level 4 or below.",
+    bad: 
+      "Lose your Headgear. If you aren't wearing any, you are dead."
+  },
+  {
+    name: "ultron",
+    set: "marvel",
+    power: 18,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "+5 against Avengers. +3 against anyone wearing armor. -4 against the vision. Will not pursue anyone level 4 or below.",
+    bad: 
+      "Lose all Allies, Items, and Powers granting you a bonus of +3 or more."
+  },
+  {
+    name: "loki",
+    set: "marvel",
+    power: 20,
+    treasure: 5,
+    levels: 2,
+    abilities: 
+      "When he enters combat, roll the die. Each player in combat loses half that many in-play Items, rounded up. Will not pursue anyone level 5 or below.",
+    bad: 
+      "Discard all the cards in your hand, and lose a level for each card discarded this way."
   }
 ];
 
