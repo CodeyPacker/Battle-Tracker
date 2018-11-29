@@ -1390,6 +1390,413 @@ const monsters = [
       "Will not pursue munchkins of Level 4 or below.",
     bad:
       "He turns you into a trinket for his collection... wich is just the same as being dead."
+  },
+  {
+    name: "janibot",
+    set: "star",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "Gadgeteers kill it automatically.",
+    bad: 
+      "You are swept, dried, dusted, and run through the wringer. Lose a level."
+  },
+  {
+    name: "fuzzball",
+    set: "star",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "Hairball! +2 against Felines!",
+    bad: 
+      "Your air filters are clogged. Lose your Headgear."
+  },
+  {
+    name: "chair",
+    set: "star",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "It might have treasure. Knock the stuffing out of it. Look behind the cushions!",
+    bad: 
+      "Psychics become one with the chair, and escape automatically. Others must discard one card (your choice)."
+  },
+  {
+    name: "eep",
+    set: "star",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "Stronger than it looks! The person to your left rolls one die and adds the result to Eep's combat strength.",
+    bad: 
+      "It steals one Item you have in play. The person to your left chooses. Discard it."
+  },
+  {
+    name: "tiny but advanced creatures",
+    set: "star",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "If you don't want to fight them, you can give them any Item, and they'll go away.",
+    bad: 
+      "They irradiate your pedal extremities. Lose your Footgear."
+  },
+  {
+    name: "carnivorous plant",
+    set: "star",
+    power: 1,
+    treasure: 1,
+    levels: 2,
+    abilities:
+      "+3 against Cyborgs... it likes the flavor.",
+    bad: 
+      "Gross vegetable hickeys. Lose a level."
+  },
+  {
+    name: "astro-muskrat space pirate",
+    set: "star",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "Will allow a Bounty Hunter to pass if the player does not wish to fight.",
+    bad: 
+      "Avast! He plunders you. The player to your right draws two cards from your hand and discards them."
+  },
+  {
+    name: "computer virus",
+    set: "star",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "+4 against Gadgeteers or Bounty Hunters. Yes, these add.",
+    bad: 
+      "Discard all Complex items you have in play."
+  },
+  {
+    name: "face hugger",
+    set: "star",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "-4 against Mutants (it can't find the face).",
+    bad: 
+      "Hold your breath, turn blue, lose two levels."
+  },
+  {
+    name: "blob",
+    set: "star",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "+1 to Run Away",
+    bad: 
+      "Swallows you and dissolves your Armor. Lose your Armor."
+  },
+  {
+    name: "bottle bottle",
+    set: "star",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "Bottle Bottle must die! The player who kills him draws one face-down Door card.",
+    bad: 
+      "He follows you around, whining. You must give him an Item to make him go away. If you have no items, lose a level."
+  },
+  {
+    name: "little green man",
+    set: "star",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "Has no females on his planet. +5 against females.",
+    bad: 
+      "Lose two levels."
+  },
+  {
+    name: "gas giant",
+    set: "star",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "In combat against a Trader or Traders, the Gas Giant snatches one Item in play from each one before combat starts. The player to the Trader's right determines what is stolen.",
+    bad: 
+      "Catastrophic flatulence! Lose two levels!"
+  },
+  {
+    name: "space cowboy",
+    set: "star",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "Some people call him the Space Cowboy. Some people just kill him. Get an extra +2 to your attack for each card you discard.",
+    bad: 
+      "Ties you up with his Electro-Lasso. You may not help anyone until after your next turn."
+  },
+  {
+    name: "giant ants",
+    set: "star",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "The group mind overwhelms Psychics. +5 against Psychics.",
+    bad: 
+      "The group mind erases your memory of your Class. Lose your Class(es)."
+  },
+  {
+    name: "space goats",
+    set: "star",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "They eat two cards from your hand before combat. Pick two cards and discard them.",
+    bad: 
+      "They eat two Items you have in play, starting with your Armor if you have any."
+  },
+  {
+    name: "fanged fuzzball",
+    set: "star",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "Hairball! +2 against Felines!",
+    bad: 
+      "It bites your hand off! In a manner of speaking, that is. Discard your whole hand."
+  },
+  {
+    name: "bug-eyed monster",
+    set: "star",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "Jealous of Mutants because they're prettier. +5 against Mutants.",
+    bad: 
+      "Cyborgs escape automatically. Others lose two levels."
+  },
+  {
+    name: "creature from the pink lagoon",
+    set: "star",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "It likes kitties. Nobody knows why. Felines may choose not to fight the Creature. If they don't fight, they draw a card from each deck, face down.",
+    bad: 
+      "Lose three levels."
+  },
+  {
+    name: "thing man was not meant to know",
+    set: "star",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "+5 against males. It doesn't mind knowing female characters; they do not have to fight it, and gain a level if they don't fight.",
+    bad: 
+      "You must lose either a Race or a Class. If you have no Race or Class to lose, you go back to Level 1."
+  },
+  {
+    name: "awful green thing",
+    set: "star",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "+3 against Psychics. -1 to flee.",
+    bad: 
+      "It head-butts you! Wham! Lose two levels and discard two cards from your hand."
+  },
+  {
+    name: "starfish",
+    set: "star",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "Fish yummy! -5 against Felines, and Felines go up an extra level if they kill it or help kill it.",
+    bad: 
+      "A puddle of water shorts out your shoes. Lose your Footgear."
+  },
+  {
+    name: "space amazon",
+    set: "star",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "She has a catty attitude. +4 against female characters, or +6 against female Felines.",
+    bad: 
+      "You must give her Items worth at least 2,000 Gold Pieces, or she pulls your hair out. Lose three levels."
+  },
+  {
+    name: "slaughterbot",
+    set: "star",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "There's good salvage in a Slaughterbot if you know what to look for. If a Gadgeteer defeats (or helps defeat) this monster, it's worth one extra treasure.",
+    bad: 
+      "Roll a die and lose that many levels."
+  },
+  {
+    name: "grays",
+    set: "star",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "They will flee before a Cyborg, leaving their treasure. Nobody gets the kill.",
+    bad: 
+      "They ask for your advice on cattle mutilation. Lose two levels... which drain off to the players on either side of you, one each."
+  },
+  {
+    name: "psi psheriff",
+    set: "star",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "-5 against Psychics. Or a Psychic may choose not to fight at all and get a free face-down Door card instead.",
+    bad: 
+      "He reads your mind and marks out the parts he doesn't like. Lose your Class(es)."
+  },
+  {
+    name: "worminator",
+    set: "star",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "-4 against Mutants",
+    bad: 
+      "A Trader can buy his way off by discarding any card. Anyone else loses two levels."
+  },
+  {
+    name: "captain quirk",
+    set: "star",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "Any female who removes Captain Quirk from the galaxy, or helps the one who does, gets an extra level.",
+    bad: 
+      "He tries to open hailing frequencies and come in peace. Lose one level if you are wearing any Armor. Otherwise, lose three levels. Yes, men, too."
+  },
+  {
+    name: "being of impure thought",
+    set: "star",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities:
+      "+5 against anyone who has changed sex at any time during the game.",
+    bad: 
+      "Lose three levels. In addition, a Trader caught by the Being may not use his Trading ability until his next turn ends."
+  },
+  {
+    name: "space vampire",
+    set: "star",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities:
+      "Any other player may discard cards to help the Space Vampire. It gets +2 for every such card discarded.",
+    bad: 
+      "Lose as many levels as you lost the combat by... maximum of 5."
+  },
+  {
+    name: "bionic bimbo",
+    set: "star",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities:
+      "If you give her any item of Footgear, you may draw three Treasures and go in peace. You may choose to fight anyway, of course.",
+    bad: 
+      "Lose all Footgear you have in play. Discard two cards of your choice AND lose two levels."
+  },
+  {
+    name: "brain in a jar",
+    set: "star",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "Will not pursue anyone of Level 3 or below. For others, escape is impossible! If you don't kill the Brain in a Jar, it follows you with its thoughts and GETS you.",
+    bad: 
+      "You forget everything you know. Lose two levels AND your Class(es)."
+  },
+  {
+    name: "space probe",
+    set: "star",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "Will not pursue anyone level 3 or below. Characters of higher Levels lose two levels if they fail to defeat it, even if they escape. ",
+    bad: 
+      "You get probed. Lose any Armor and/or Headgear you are wearing. Lose two levels. Lose your dignity."
+  },
+  {
+    name: "frank the tank",
+    set: "star",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "+5 against Gadgeteers. Frank wants their toys.",
+    bad: 
+      "Lose all Items you have in play. But as compensation, if you are below level 3, Frank will raise you to Level 3 so you'll be more fun next time."
+  },
+  {
+    name: "plasmoid",
+    set: "star",
+    power: 18,
+    treasure: 5,
+    levels: 2,
+    abilities:
+      "Wanted in 18 sectors. +1 Treasure to each Bounty Hunter who defeats it. Fire and flame weapons do not affect the Plasmoid.",
+    bad: 
+      "It burns you to a tiny, dry, black, ashy, flaky, dead crisp. Then it steps on you. Then it laughs."
+  },
+  {
+    name: "ogre",
+    set: "star",
+    power: 18,
+    treasure: 5,
+    levels: 2,
+    abilities:
+      "+4 against Cyborgs for having meat brains and not being shiny.",
+    bad: 
+      "Oh, you are SO dead."
+  },
+  {
+    name: "great cthulhu",
+    set: "star",
+    power: 20,
+    treasure: 5,
+    levels: 2,
+    abilities:
+      "Sidekicks flee before Great Cthulhu and cannot help you fight him, or save you from his slobbering grasp. (If you survive, they'll come slinking back.)",
+    bad: 
+      "Not only are you dead, but everyone who Great Cthulhu did not catch goes up a level, just to mock you."
   }
 ];
 
