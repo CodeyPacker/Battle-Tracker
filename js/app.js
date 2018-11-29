@@ -1,383 +1,3 @@
-const weston = [{
-    name: "snark",
-    set: "booty",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "If ye looks at Snark all squinty-like, it looks like Shark, so he counts as a Shark.",
-    bad: "Discard all items ye have in play that start with S."
-  },
-  {
-    name: "rum bum chugger",
-    set: "booty",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "+3 against Merchants.",
-    bad: "Accursed! Any player who plays a Curse on ye right now will get the card back, if the Curse actually has some effect on ye."
-  },
-  {
-    name: "bathtub duckie",
-    set: "booty",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "Enhancers played on the Duckie count an extra +5 each... but do not give it any extra Treasure at all.",
-    bad: "Ye should know better than to pick up a duckie in a dinghy. Anything could happen! Take the Bad Stuff from the top monster in the Door discards. If there is non ye get away free."
-  },
-  {
-    name: "seaweed",
-    set: "booty",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "As a Wandering Monster, the Seaweed gives +5 to the monsters' side for each Munchkin involved.",
-    bad: "Tangled up. Lose yer Footgear."
-  },
-  {
-    name: "clam",
-    set: "booty",
-    power: 1,
-    treasure: 1,
-    levels: 1,
-    abilities: "+5 against anyone with no Class. Ye have +1 to Run Away.",
-    bad: "Clam up! Ye may not speak until yer next turn. Ye must communicate by gerstures, written notes, or interpretive dance. Each time ye speak, ye must discard one card."
-  },
-  {
-    name: "jellyfish",
-    set: "booty",
-    power: 2,
-    treasure: 1,
-    levels: 2,
-    abilities: "Enhancers played on the Jellyfish count double! +1 to Run Away.",
-    bad: "It stings ye! Lose two levels."
-  },
-  {
-    name: "viking kittens",
-    set: "booty",
-    power: 2,
-    treasure: 1,
-    levels: 2,
-    abilities: "+4 against females. +4 against pirates. So KY00T!",
-    bad: "Viking hairballs! Lose a level."
-  },
-  {
-    name: "sardine",
-    set: "booty",
-    power: 2,
-    treasure: 1,
-    levels: 2,
-    abilities: "Not a gourmet item. +5 against French.",
-    bad: "If ye fail to Run Away, ye must discard all yer Big items except Ships."
-  },
-  {
-    name: "scurvy dog",
-    set: "booty",
-    power: 2,
-    treasure: 1,
-    levels: 2,
-    abilities: "+4 against Navy.",
-    bad: "Ye let him beat ye? Ye should be ashamed. Lose yer Class(es)."
-  },
-  {
-    name: "lousy pink shark",
-    set: "booty",
-    power: 2,
-    treasure: 1,
-    levels: 2,
-    abilities: "+2 against French.",
-    bad: "This creature is so lame it has no bad effects. Ye escape automatically."
-  },
-  {
-    name: "dogfish",
-    set: "booty",
-    power: 4,
-    treasure: 2,
-    levels: 4,
-    abilities: "The Dogfish is actually a Shark. (Scientific fact!) So he counts as a Shark. If played in the same combat with the Catfish discard both monsters.",
-    bad: "Lose the most valuable discard both monsters."
-  },
-  {
-    name: "captain kid",
-    set: "booty",
-    power: 4,
-    treasure: 2,
-    levels: 4,
-    abilities: "He's family No pirate may fight or help to fight, Captain Kid. If ye are a pirate a ye draw him face-up, discard him and either Loot The Room or draw another face-up Door.",
-    bad: "Give him a toy. The player to yer left chooses an Item from those ye has in play. Discard it."
-  },
-  {
-    name: "sea cow",
-    set: "booty",
-    power: 4,
-    treasure: 2,
-    levels: 4,
-    abilities: "+3 against Pirates.",
-    bad: "Udder disaster! Discard every Item ye have that is worth more than 600 Gold Pieces. If ye have no such items, lose a level."
-  },
-  {
-    name: "catfish",
-    set: "booty",
-    power: 4,
-    treasure: 2,
-    levels: 4,
-    abilities: "+2 against Dutch. If played in the same combat with the Dogfish, discard both monsters.",
-    bad: "Disacard and enhancer(s) on yer Ship(s)."
-  },
-  {
-    name: "greenbeard",
-    set: "booty",
-    power: 6,
-    treasure: 2,
-    levels: 6,
-    abilities: "+3 against females.",
-    bad: "Males lose a level. Females may choose between discarding an item and losing a level."
-  },
-  {
-    name: "adequate brown shark",
-    set: "booty",
-    power: 6,
-    treasure: 2,
-    levels: 6,
-    abilities: "+2 against Spanish.",
-    bad: "Exchange yer hand for that of the player who has the fewest cards. In case of ties, ye choose who to trade with. If ye have the fewest or are tied for fewest, there is no effect."
-  }
-];
-
-const cody = [
-  {
-    name: "lobster mobster",
-    set: "booty",
-    power: 6,
-    treasure: 2,
-    levels: 1,
-    abilities:
-      "+3 against Navy. He is a \"loan shark\", so he counts as a shark.",
-    bad: 
-      "Ye wanna sleep wit' da fishies? He can arrange it. Reduce yer Level to that of the lowest-Level player."
-  },
-  {
-    name: "piano tuna",
-    set: "booty",
-    power: 6,
-    treasure: 2,
-    levels: 1,
-    abilities:
-      "He loves an audience. He gets +10 if in the same combat with the Privatears.",
-    bad: 
-      "Sing along until ye lose yer Accent. Discard all Accent cards."
-  },
-  {
-    name: "almighty cod",
-    set: "booty",
-    power: 8,
-    treasure: 2,
-    levels: 1,
-    abilities:
-      "-3 against Merchants.",
-    bad: 
-      "Discod a card. Err, discard a cod. Blimey! Discard a card."
-  },
-  {
-    name: "mermaid",
-    set: "booty",
-    power: 8,
-    treasure: 2,
-    levels: 1,
-    abilities:
-      "+4 against males.",
-    bad: 
-      "Males lose their Armor and Footgear, but she lets them keep their hats on. Females just lose a level."
-  },
-  {
-    name: "perfectly good blue shark",
-    set: "booty",
-    power: 8,
-    treasure: 2,
-    levels: 1,
-    abilities:
-      "-4 against French. Sacre bleu!",
-    bad: 
-      "It takes a perfectly good bite out of ye. Lose a level."
-  },
-  {
-    name: "privatears",
-    set: "booty",
-    power: 8,
-    treasure: 2,
-    levels: 1,
-    abilities:
-      "+5 against British. -2 against Dutch.",
-    bad: 
-      "If ye has more than one Accent, or more than one Class, ye must discard one Accent or Class."
-  },
-  {
-    name: "redbeard",
-    set: "booty",
-    power: 10,
-    treasure: 3,
-    levels: 1,
-    abilities:
-      "+3 against Merchants. Dirty capitalists.",
-    bad: 
-      "Ye must give him one Item requiring Hands. If ye has none, lose a level."
-  },
-  {
-    name: "sea lawyer",
-    set: "booty",
-    power: 10,
-    treasure: 3,
-    levels: 1,
-    abilities:
-      "-2 against British. And, of course, he counts as a Shark.",
-    bad: 
-      "Ye suffer the effects of the top Curse in the discards. If that Curse does not affect ye, lose a level. If there is no Curse in the discards, ye gets away on a technicality and may draw a treasure."
-  },
-  {
-    name: "puffer fish",
-    set: "booty",
-    power: 10,
-    treasure: 3,
-    levels: 1,
-    abilities:
-      "If ye defeat it, then instead of killing it to go up a level, ye can keep it as a Ship Enhancer to fill yer sails with wind. It gives one ship a +2 bonus. Yes, ye gets its Treasures either way.",
-    bad: 
-      "Blows ye away! Lose yer smallest Ship, or lose a level if ye has no Ship."
-  },
-  {
-    name: "fine gray shark",
-    set: "booty",
-    power: 12,
-    treasure: 3,
-    levels: 1,
-    abilities:
-      "+2 against British. -3 against Navy.",
-    bad: 
-      "Lose either yer Armor or yer Footgear. Ye get to choose which."
-  },
-  {
-    name: "howling gail",
-    set: "booty",
-    power: 12,
-    treasure: 3,
-    levels: 1,
-    abilities:
-      "-4 against Merchants. -4 against Spanish.",
-    bad: 
-      "Give two cards to the player on yer right. He must give ye one card in return."
-  },
-  {
-    name: "sawfish",
-    set: "booty",
-    power: 12,
-    treasure: 3,
-    levels: 1,
-    abilities:
-      "+5 against Dutch. -2 against French. Yer Ship(s) do not help ye in this battle.",
-    bad: 
-      "Lose one Ship, unless yer accent is Dutch. In that case, it saws yer shoes apart. Lose yer Footgear."
-  },
-  {
-    name: "nobeard",
-    set: "booty",
-    power: 14,
-    treasure: 4,
-    levels: 1,
-    abilities:
-      "+3 against males. +3 against Navy.",
-    bad: 
-      "She likes yer hat. Lose yer Headgear. If ye has no Headgear, lose a level and discard a card."
-  },
-  {
-    name: "skeleton crew",
-    set: "booty",
-    power: 14,
-    treasure: 4,
-    levels: 1,
-    abilities:
-      "+3 against Pirates. -2 against Spanish.",
-    bad: 
-      "They needs boots, arrr! Lose yer Footgear. If ye has no Footgear, lose a level instead."
-  },
-  {
-    name: "sir francis drake",
-    set: "booty",
-    power: 14,
-    treasure: 4,
-    levels: 1,
-    abilities:
-      "+5 against Spanish. If ye be British, no battle can ensue. Instead, he gives ye a gift... draw a Treasure.",
-    bad: 
-      "Ye be disarmored. Lose yer Armor. If ye has no Armor, lose a level."
-  },
-  {
-    name: "blackbeard",
-    set: "booty",
-    power: 16,
-    treasure: 4,
-    levels: 2,
-    abilities:
-      "-3 against Pirates. +4 against Merchants. Will not pursue anyone of Level 3 or below.",
-    bad: 
-      "Ye are plundered! Lose yer Ship and any two other items."
-  },
-  {
-    name: "boojum",
-    set: "booty",
-    power: 16,
-    treasure: 4,
-    levels: 2,
-    abilities:
-      "If the Snark is in the combat, any player may exchange it for this card, turning the Snark into a Boojum.",
-    bad: 
-      "Ye are softly and silently vanished away. Ye are dead. Should ye encounter a Snark later, ye must Run Away without trying to fight."
-  },
-  {
-    name: "great white shark",
-    set: "booty",
-    power: 16,
-    treasure: 4,
-    levels: 2,
-    abilities:
-      "-4 against Navy. Will not pursue anyone of Level 3 or below.",
-    bad: 
-      "Lose two levels. But if either the \"Wooden Leg\" or the \"Hook\" is in the discards, ye may choose one and take it."
-  },
-  {
-    name: "prince of whales",
-    set: "booty",
-    power: 18,
-    treasure: 5,
-    levels: 2,
-    abilities:
-      "-4 against British or Dutch. Will not pursue anyone of Level 4 or below.",
-    bad: 
-      "Swallowed! Lose two levels."
-  },
-  {
-    name: "liopleurodon",
-    set: "booty",
-    power: 18,
-    treasure: 4,
-    levels: 2,
-    abilities:
-      "-4 against Pirates. Ships count double against it.",
-    bad: 
-      "Lose a Ship. If ye have no ship, ye are dead."
-  },
-  {
-    name: "davy jones",
-    set: "booty",
-    power: 20,
-    treasure: 5,
-    levels: 2,
-    abilities:
-      "Will not pursue anyone of Level 5 or below.",
-    bad: 
-      "Ye are dead, dead, drowndead. But if ye had any of Davy Jones' items when ye went down, each one gives ye an extra level when ye return."
-  }
-];
-
 const monsters = [{
     name: "jerry's mytholog",
     set: "rick and morty",
@@ -1808,6 +1428,381 @@ const monsters = [{
     levels: 2,
     abilities: "Sidekicks flee before Great Cthulhu and cannot help you fight him, or save you from his slobbering grasp. (If you survive, they'll come slinking back.)",
     bad: "Not only are you dead, but everyone who Great Cthulhu did not catch goes up a level, just to mock you."
+  },
+  {
+    name: "snark",
+    set: "booty",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: "If ye looks at Snark all squinty-like, it looks like Shark, so he counts as a Shark.",
+    bad: "Discard all items ye have in play that start with S."
+  },
+  {
+    name: "rum bum chugger",
+    set: "booty",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: "+3 against Merchants.",
+    bad: "Accursed! Any player who plays a Curse on ye right now will get the card back, if the Curse actually has some effect on ye."
+  },
+  {
+    name: "bathtub duckie",
+    set: "booty",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: "Enhancers played on the Duckie count an extra +5 each... but do not give it any extra Treasure at all.",
+    bad: "Ye should know better than to pick up a duckie in a dinghy. Anything could happen! Take the Bad Stuff from the top monster in the Door discards. If there is non ye get away free."
+  },
+  {
+    name: "seaweed",
+    set: "booty",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: "As a Wandering Monster, the Seaweed gives +5 to the monsters' side for each Munchkin involved.",
+    bad: "Tangled up. Lose yer Footgear."
+  },
+  {
+    name: "clam",
+    set: "booty",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: "+5 against anyone with no Class. Ye have +1 to Run Away.",
+    bad: "Clam up! Ye may not speak until yer next turn. Ye must communicate by gerstures, written notes, or interpretive dance. Each time ye speak, ye must discard one card."
+  },
+  {
+    name: "jellyfish",
+    set: "booty",
+    power: 2,
+    treasure: 1,
+    levels: 2,
+    abilities: "Enhancers played on the Jellyfish count double! +1 to Run Away.",
+    bad: "It stings ye! Lose two levels."
+  },
+  {
+    name: "viking kittens",
+    set: "booty",
+    power: 2,
+    treasure: 1,
+    levels: 2,
+    abilities: "+4 against females. +4 against pirates. So KY00T!",
+    bad: "Viking hairballs! Lose a level."
+  },
+  {
+    name: "sardine",
+    set: "booty",
+    power: 2,
+    treasure: 1,
+    levels: 2,
+    abilities: "Not a gourmet item. +5 against French.",
+    bad: "If ye fail to Run Away, ye must discard all yer Big items except Ships."
+  },
+  {
+    name: "scurvy dog",
+    set: "booty",
+    power: 2,
+    treasure: 1,
+    levels: 2,
+    abilities: "+4 against Navy.",
+    bad: "Ye let him beat ye? Ye should be ashamed. Lose yer Class(es)."
+  },
+  {
+    name: "lousy pink shark",
+    set: "booty",
+    power: 2,
+    treasure: 1,
+    levels: 2,
+    abilities: "+2 against French.",
+    bad: "This creature is so lame it has no bad effects. Ye escape automatically."
+  },
+  {
+    name: "dogfish",
+    set: "booty",
+    power: 4,
+    treasure: 2,
+    levels: 4,
+    abilities: "The Dogfish is actually a Shark. (Scientific fact!) So he counts as a Shark. If played in the same combat with the Catfish discard both monsters.",
+    bad: "Lose the most valuable discard both monsters."
+  },
+  {
+    name: "captain kid",
+    set: "booty",
+    power: 4,
+    treasure: 2,
+    levels: 4,
+    abilities: "He's family No pirate may fight or help to fight, Captain Kid. If ye are a pirate a ye draw him face-up, discard him and either Loot The Room or draw another face-up Door.",
+    bad: "Give him a toy. The player to yer left chooses an Item from those ye has in play. Discard it."
+  },
+  {
+    name: "sea cow",
+    set: "booty",
+    power: 4,
+    treasure: 2,
+    levels: 4,
+    abilities: "+3 against Pirates.",
+    bad: "Udder disaster! Discard every Item ye have that is worth more than 600 Gold Pieces. If ye have no such items, lose a level."
+  },
+  {
+    name: "catfish",
+    set: "booty",
+    power: 4,
+    treasure: 2,
+    levels: 4,
+    abilities: "+2 against Dutch. If played in the same combat with the Dogfish, discard both monsters.",
+    bad: "Disacard and enhancer(s) on yer Ship(s)."
+  },
+  {
+    name: "greenbeard",
+    set: "booty",
+    power: 6,
+    treasure: 2,
+    levels: 6,
+    abilities: "+3 against females.",
+    bad: "Males lose a level. Females may choose between discarding an item and losing a level."
+  },
+  {
+    name: "adequate brown shark",
+    set: "booty",
+    power: 6,
+    treasure: 2,
+    levels: 6,
+    abilities: "+2 against Spanish.",
+    bad: "Exchange yer hand for that of the player who has the fewest cards. In case of ties, ye choose who to trade with. If ye have the fewest or are tied for fewest, there is no effect."
+  },
+  {
+    name: "lobster mobster",
+    set: "booty",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "+3 against Navy. He is a \"loan shark\", so he counts as a shark.",
+    bad: 
+      "Ye wanna sleep wit' da fishies? He can arrange it. Reduce yer Level to that of the lowest-Level player."
+  },
+  {
+    name: "piano tuna",
+    set: "booty",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "He loves an audience. He gets +10 if in the same combat with the Privatears.",
+    bad: 
+      "Sing along until ye lose yer Accent. Discard all Accent cards."
+  },
+  {
+    name: "almighty cod",
+    set: "booty",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "-3 against Merchants.",
+    bad: 
+      "Discod a card. Err, discard a cod. Blimey! Discard a card."
+  },
+  {
+    name: "mermaid",
+    set: "booty",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "+4 against males.",
+    bad: 
+      "Males lose their Armor and Footgear, but she lets them keep their hats on. Females just lose a level."
+  },
+  {
+    name: "perfectly good blue shark",
+    set: "booty",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "-4 against French. Sacre bleu!",
+    bad: 
+      "It takes a perfectly good bite out of ye. Lose a level."
+  },
+  {
+    name: "privatears",
+    set: "booty",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities:
+      "+5 against British. -2 against Dutch.",
+    bad: 
+      "If ye has more than one Accent, or more than one Class, ye must discard one Accent or Class."
+  },
+  {
+    name: "redbeard",
+    set: "booty",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "+3 against Merchants. Dirty capitalists.",
+    bad: 
+      "Ye must give him one Item requiring Hands. If ye has none, lose a level."
+  },
+  {
+    name: "sea lawyer",
+    set: "booty",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "-2 against British. And, of course, he counts as a Shark.",
+    bad: 
+      "Ye suffer the effects of the top Curse in the discards. If that Curse does not affect ye, lose a level. If there is no Curse in the discards, ye gets away on a technicality and may draw a treasure."
+  },
+  {
+    name: "puffer fish",
+    set: "booty",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "If ye defeat it, then instead of killing it to go up a level, ye can keep it as a Ship Enhancer to fill yer sails with wind. It gives one ship a +2 bonus. Yes, ye gets its Treasures either way.",
+    bad: 
+      "Blows ye away! Lose yer smallest Ship, or lose a level if ye has no Ship."
+  },
+  {
+    name: "fine gray shark",
+    set: "booty",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "+2 against British. -3 against Navy.",
+    bad: 
+      "Lose either yer Armor or yer Footgear. Ye get to choose which."
+  },
+  {
+    name: "howling gail",
+    set: "booty",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "-4 against Merchants. -4 against Spanish.",
+    bad: 
+      "Give two cards to the player on yer right. He must give ye one card in return."
+  },
+  {
+    name: "sawfish",
+    set: "booty",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities:
+      "+5 against Dutch. -2 against French. Yer Ship(s) do not help ye in this battle.",
+    bad: 
+      "Lose one Ship, unless yer accent is Dutch. In that case, it saws yer shoes apart. Lose yer Footgear."
+  },
+  {
+    name: "nobeard",
+    set: "booty",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities:
+      "+3 against males. +3 against Navy.",
+    bad: 
+      "She likes yer hat. Lose yer Headgear. If ye has no Headgear, lose a level and discard a card."
+  },
+  {
+    name: "skeleton crew",
+    set: "booty",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities:
+      "+3 against Pirates. -2 against Spanish.",
+    bad: 
+      "They needs boots, arrr! Lose yer Footgear. If ye has no Footgear, lose a level instead."
+  },
+  {
+    name: "sir francis drake",
+    set: "booty",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities:
+      "+5 against Spanish. If ye be British, no battle can ensue. Instead, he gives ye a gift... draw a Treasure.",
+    bad: 
+      "Ye be disarmored. Lose yer Armor. If ye has no Armor, lose a level."
+  },
+  {
+    name: "blackbeard",
+    set: "booty",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "-3 against Pirates. +4 against Merchants. Will not pursue anyone of Level 3 or below.",
+    bad: 
+      "Ye are plundered! Lose yer Ship and any two other items."
+  },
+  {
+    name: "boojum",
+    set: "booty",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "If the Snark is in the combat, any player may exchange it for this card, turning the Snark into a Boojum.",
+    bad: 
+      "Ye are softly and silently vanished away. Ye are dead. Should ye encounter a Snark later, ye must Run Away without trying to fight."
+  },
+  {
+    name: "great white shark",
+    set: "booty",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "-4 against Navy. Will not pursue anyone of Level 3 or below.",
+    bad: 
+      "Lose two levels. But if either the \"Wooden Leg\" or the \"Hook\" is in the discards, ye may choose one and take it."
+  },
+  {
+    name: "prince of whales",
+    set: "booty",
+    power: 18,
+    treasure: 5,
+    levels: 2,
+    abilities:
+      "-4 against British or Dutch. Will not pursue anyone of Level 4 or below.",
+    bad: 
+      "Swallowed! Lose two levels."
+  },
+  {
+    name: "liopleurodon",
+    set: "booty",
+    power: 18,
+    treasure: 4,
+    levels: 2,
+    abilities:
+      "-4 against Pirates. Ships count double against it.",
+    bad: 
+      "Lose a Ship. If ye have no ship, ye are dead."
+  },
+  {
+    name: "davy jones",
+    set: "booty",
+    power: 20,
+    treasure: 5,
+    levels: 2,
+    abilities:
+      "Will not pursue anyone of Level 5 or below.",
+    bad: 
+      "Ye are dead, dead, drowndead. But if ye had any of Davy Jones' items when ye went down, each one gives ye an extra level when ye return."
   }
 ];
 
