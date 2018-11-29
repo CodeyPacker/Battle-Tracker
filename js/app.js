@@ -994,6 +994,402 @@ const monsters = [
       "When he enters combat, roll the die. Each player in combat loses half that many in-play Items, rounded up. Will not pursue anyone level 5 or below.",
     bad: 
       "Discard all the cards in your hand, and lose a level for each card discarded this way."
+  },
+  {
+    name: "jackdaws",
+    set: "oz",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities:
+      "+3 against anyone with 'Woggle-Bug' or 'Jack Pumpkinhead'; +6 if you have both!",
+    bad: 
+      "Turn all your in-play Items over, shuffle them, and discard one at random. Replace the others as they were."
+  },
+  {
+    name: "flutterbudgets",
+    set: "oz",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "If you have any Curses in your hand, play them on yourself when the Flutterbudgets enter combat.",
+    bad:
+      "You automatically fail your next Run Away roll, even if it would otherwise be automatic."
+  },
+  {
+    name: "flutterbudgets",
+    set: "oz",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "Abilities",
+    bad:
+      "Bad"
+  },
+  {
+    name: "rigmaroles",
+    set: "oz",
+    power: 1,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "They don't stop talking! You cannot ask for help in this combat.",
+    bad:
+      "Lose your Headgear so you can put your hands over your ears."
+  },
+  {
+    name: "scoodlers",
+    set: "oz",
+    power: 2,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "+4 against Royalty",
+    bad:
+      "They knock you right out of your socks. Lose your Footgear."
+  },
+  {
+    name: "oztrich",
+    set: "oz",
+    power: 3,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "-1 to Run Away.",
+    bad:
+      "Wickid kick! Lose your armor; if you have no Armor, lose a level AND two cards."
+  },
+  {
+    name: "hammer-heads",
+    set: "oz",
+    power: 3,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "+4 against Wizards.",
+    bad:
+      "Body blow! Lose a level unless you have armor."
+  },
+  {
+    name: "nome",
+    set: "oz",
+    power: 3,
+    treasure: 1,
+    levels: 1,
+    abilities: 
+      "May join 'General Guph' or 'The Nome King' without using a Wandering Monster card.",
+    bad:
+      "Discard an Item."
+  },
+  {
+    name: "royal gardener of the rose kingdom",
+    set: "oz",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+4 against Soldiers",
+    bad:
+      "Savage thorn wounds! Lose a Hand item; if you do not have one, lose a level."
+  },
+  {
+    name: "wolves",
+    set: "oz",
+    power: 4,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "May join the 'Wicked Witch of the West' without a Wandering Monster card.",
+    bad:
+      "They dine well... on you. You are dead."
+  },
+  {
+    name: "king kleaver of utensia",
+    set: "oz",
+    power: 5,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+3 against Royalty. Usurpers!",
+    bad:
+      "CHOP! Lose one Hand. The effect can be lifted with a 'Wishing Pill' or when you die."
+  },
+  {
+    name: "invisible bears",
+    set: "oz",
+    power: 5,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "When the Invisible Bears join the combat, the main player may not play any more cards or use Class abilities. His helper, if any, is unaffected.",
+    bad:
+      "Lose your Armor. If you don't have Armor, lose two levels."
+  },
+  {
+    name: "blinkie",
+    set: "oz",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "May join 'King Krewl' in combat without a Wandering Monster card.",
+    bad:
+      "Evil eye! Lose a level or three cards, your choice."
+  },
+  {
+    name: "winged monkeys",
+    set: "oz",
+    power: 6,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+3 against Soldiers.",
+    bad:
+      "If another player has the 'Golden Cap', give that player two cards. Otherwise, discard two cards."
+  },
+  {
+    name: "whimsies",
+    set: "oz",
+    power: 7,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+3 against Proffessors and Wizards. +6 against both!",
+    bad:
+      "Lose your Headgear. If you don't have any, lose a level."
+  },
+  {
+    name: "gwig",
+    set: "oz",
+    power: 7,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "Ouch! +4 if your have no Armor.",
+    bad:
+      "Lose an Item worth at least 400 Gold Pieces. If you don't have such an Item, lose any two items."
+  },
+  {
+    name: "wheelers",
+    set: "oz",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "-1 to Run Away",
+    bad:
+      "They run you down! Lose your Footgear and a level."
+  },
+  {
+    name: "wicked witch of the east",
+    set: "oz",
+    power: 8,
+    treasure: 2,
+    levels: 1,
+    abilities: 
+      "+5 against a munchkin with no Ally. (If two munchkins are fighting and neither has an Ally, +10.)",
+    bad:
+      "Lose your Footgear. If you don't have any Footgear, lose an Ally instead."
+  },
+  {
+    name: "horners",
+    set: "oz",
+    power: 9,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+3 against munchkins without Armor.",
+    bad:
+      "Impaled! Lose two levels."
+  },
+  {
+    name: "hoppers",
+    set: "oz",
+    power: 9,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+3 against munchkins with Footgear out of sheer envy.",
+    bad:
+      "-1 to your next Run Away roll for every point you failed this roll by."
+  },
+  {
+    name: "horners",
+    set: "oz",
+    power: 9,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "ab",
+    bad:
+      "Bad"
+  },
+  {
+    name: "gurgles",
+    set: "oz",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "No permanent Items count in this combat; use your level and one-shots only!",
+    bad:
+      "Discard the Item currently giving you the largest combat bonus. In case of a tie, choose one."
+  },
+  {
+    name: "fighting trees",
+    set: "oz",
+    power: 10,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+2 for each unused Hand the munchkin(s) fighting them have.",
+    bad:
+      "Discard all \"usable once only\" Items in play"
+  },
+  {
+    name: "general guph",
+    set: "oz",
+    power: 11,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "May join 'The Nome King' in combat without a Wandering Monster card.",
+    bad:
+      "Discard your Class(es). If you have no Class (heh, heh), lose a level."
+  },
+  {
+    name: "mombi",
+    set: "oz",
+    power: 11,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "-5 against anyone who has changed sex this game.",
+    bad:
+      "She changes your sex. -5 on your next combat due to distraction. The penalty can be lifted with a 'Wishing Pill' but the change is permanent."
+  },
+  {
+    name: "li-mon-eag",
+    set: "oz",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "+4 against Super Munchkins.",
+    bad:
+      "You are dead."
+  },
+  {
+    name: "tititi-hoochoo, the great jinjin",
+    set: "oz",
+    power: 12,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "-3 against Royalty",
+    bad:
+      "Banished! You must step away from the table until the start of your next turn. You may not play or receive any cards or take part in any table talk."
+  },
+  {
+    name: "iron giant",
+    set: "oz",
+    power: 13,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "-3 against anyone without Big items.",
+    bad:
+      "Lose all your Big items. If you have no Big items, lose two levels."
+  },
+  {
+    name: "the yoop",
+    set: "oz",
+    power: 13,
+    treasure: 3,
+    levels: 1,
+    abilities: 
+      "The Yoop is a cannibal. As soon as it enters combat, it eats one of your Allies.",
+    bad:
+      "Lose a level. Lose an extra level if you don't have Armor or Headgear."
+  },
+  {
+    name: "phanfasms",
+    set: "oz",
+    power: 14,
+    treasure: 4,
+    levels: 1,
+    abilities: 
+      "-3 against Soldiers.",
+    bad:
+      "Lose a level and your Armor."
+  },
+  {
+    name: "kalidah",
+    set: "oz",
+    power: 15,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "-3 against Wizards or Professors. -6 against both!",
+    bad:
+      "Lose three levels."
+  },
+  {
+    name: "general jinjur",
+    set: "oz",
+    power: 16,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "-4 against Wizards, Royalty, or anyone with 'Ozma' as an Ally. (Do not apply the penalty more than once.)",
+    bad:
+      "Expelled from the Emerald City! Lose your Class AND discard at least 800 Gold Pieces of Items."
+  },
+  {
+    name: "king krewl of jinxland",
+    set: "oz",
+    power: 17,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "-4 against Soldiers.",
+    bad:
+      "You are jinxed! You cannot accept help in combat until you kill a monster single-handedly."
+  },
+  {
+    name: "quox",
+    set: "oz",
+    power: 18,
+    treasure: 4,
+    levels: 2,
+    abilities: 
+      "-4 against Professors. Will not pursue munchkins of Level 2 or below.",
+    bad:
+      "Lose all your Hand items."
+  },
+  {
+    name: "wicked witch of the west",
+    set: "oz",
+    power: 19,
+    treasure: 5,
+    levels: 2,
+    abilities: 
+      "-5 if you have 'Dorothy' as an Ally. The 'Water Bucket' kills her instantly! Will not pursue anyone Level 3 or below.",
+    bad:
+      "You are dead... and your little dog too! If any player has 'Toto' in play, discard it."
+  },
+  {
+    name: "the nome king",
+    set: "oz",
+    power: 20,
+    treasure: 5,
+    levels: 2,
+    abilities: 
+      "Will not pursue munchkins of Level 4 or below.",
+    bad:
+      "He turns you into a trinket for his collection... wich is just the same as being dead."
   }
 ];
 
